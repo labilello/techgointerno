@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
@@ -138,6 +141,8 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/silviolleite/laravelpwa" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hp1o8xvwtWUQ4k5eRIhMNrEQ8d" />
@@ -216,6 +221,8 @@
       <workItem from="1602851642697" duration="10118000" />
       <workItem from="1603460031124" duration="10207000" />
       <workItem from="1606222237453" duration="11160000" />
+      <workItem from="1606314337046" duration="1213000" />
+      <workItem from="1606317809734" duration="1091000" />
     </task>
     <servers />
   </component>

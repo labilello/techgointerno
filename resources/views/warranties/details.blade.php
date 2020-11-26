@@ -68,7 +68,7 @@
         </div>
 
 
-        <div class="grid gap-20 grid-cols-12">
+        <div class="flex flex-col md:grid md:gap-20 md:grid-cols-12">
             <div class="col-span-12 md:col-span-8 col-start-1"> {{-- LADO IZQUIERDO --}}
 
                 @if( count($warranty->devices) > 0)

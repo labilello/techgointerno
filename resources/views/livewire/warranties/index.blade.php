@@ -1,6 +1,6 @@
 <div>
-    <div class="flex">
-        <div class="w-5/12">
+    <div class="flex flex-col md:flex-row ">
+        <div class="w-full md:w-5/12">
             <input wire:model="search_query" type="text" placeholder="Ejemplo: Samsung" class="rounded py-2 px-3 w-full border-2 border-solid ">
             <div class="flex items-center mt-2" wire:loading wire:target="search_query">
                 <svg class="inline-flex" width="25" height="25" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#025aa5">
@@ -22,8 +22,9 @@
                 <span class="ml-2 text-sm font-bold text-tertiary-dark">Buscando coincidencias...</span>
             </div>
         </div>
-        <div class="7/12 ml-6">
-            <p class="text-primary text-sm block"><span class="mr-1 font-bold">AYUDA:</span>Si utiliza el buscador, solo se mostraran las marcas que concuerden con la busqueda.<br>Puede encontrar el periodo de garantía para cada marca en información general!</p>
+        <div class="w-full md:7/12 mb-2 mt-2 md:ml-6">
+            <p class="text-primary text-sm block"><span class="mr-1 font-bold">AYUDA:</span>Si utiliza el buscador, solo se mostraran las marcas que concuerden con la busqueda.</p>
+{{--            <br>Puede encontrar el periodo de garantía para cada marca en información general!--}}
         </div>
 
     </div>

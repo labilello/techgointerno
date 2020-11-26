@@ -18,7 +18,7 @@
                    href="#">
                     {{ __('Herramientas') }}
                 </a>
-            </nav>
+        </nav>
 
             <div class="flex items-center ">
                 <div class="text-right leading-none">

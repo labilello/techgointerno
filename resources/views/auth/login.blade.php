@@ -7,7 +7,7 @@
         {{ __('Inicio de sesión') }}
     </x-slot>
 
-    <div class="bg-white rounded-lg w-2/5 px-7 py-5 mx-auto mt-4">
+    <div class="bg-white rounded-lg w-11/12 md:w-2/5 px-7 py-5 mx-auto mt-4">
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))

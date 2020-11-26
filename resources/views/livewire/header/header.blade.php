@@ -67,27 +67,19 @@
 
 {{--</div>--}}
 
-<div class="relative bg-primary border-b border-white flex items-center">
-    <div class="px-4 mx-auto">
+
+{{-- NORMAL HEADER --}}
+<div x-data="{ open: false }" :class="{'items-start flex-col': open, 'items-center flex-row': ! open}" class="flex relative bg-primary border-b border-white items-center justify-between">
+    <div class="py-3 px-4 md:py-0 md:px-4 md:mx-auto" :class="{'w-full text-center': open, '': ! open}">
         <a href="{{ route('index') }}">
             <img class="h-8 block w-auto" src="{{ asset('resource/techgo-logo.svg') }}" alt="Logo" />
         </a>
     </div>
 
-    <div class="-mr-2 -my-2 md:hidden">
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-            <!-- Heroicon name: menu -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </div> {{-- Hamburger icon --}}
-
-
     <div class="hidden md:block md:flex-1">
         <div class="flex justify-between items-center w-full pr-4">
             {{-- TOP (NAV - USER) --}}
-            <nav class="h-16 flex relative z-20">
+            <nav class="h-16 flex relative z-20" x-data="{ open: false }">
 
                 <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                 <div class="relative group">
@@ -237,6 +229,66 @@
     </div>
 
 
+    <nav class="block md:hidden" :class="{'w-11/12 mx-auto my-0': open, '': ! open}">
+        <!-- Hamburger -->
+        <div class="mr-2 flex items-center sm:hidden">
+            <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Responsive Navigation Menu -->
+        <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+            <div class="pt-2 pb-3 space-y-1 text-white">
+                <a href="/" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                    Inicio
+                </a>
+                <a href="/fotos" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                    Imagenes de dispositivos
+                </a>
+                <a href="/soporte-tecnico" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                    Soporte tecnico
+                </a>
+                <a href="/usuarios" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                    Usuarios
+                </a>
+            </div>
+
+            <!-- Responsive Settings Options -->
+            <div class="pt-4 pb-1 border-t border-gray-200">
+                <div class="flex items-center px-4">
+                    <div class="flex-shrink-0">
+                        <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="Profile image" />
+                    </div>
+
+                    <div class="ml-3">
+                        <div class="text-sm text-white font-bold uppercase">{{ Auth::user()->name }}</div>
+                        <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
+                    </div>
+                </div>
+
+                <div class="mt-3 space-y-1">
+                    <!-- Account Management -->
+                    <a href="/user/profile" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
+                        Mi perfil
+                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a href="{{ route('logout') }}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
+                           onclick="event.preventDefault(); this.closest('form').submit();"
+                        >
+                            Cerrar sesión
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
 {{--    <nav aria-label="primary" class="relative z-20 flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">--}}
 
 {{--        <div class="relative group">--}}
@@ -274,6 +326,17 @@
 
 </div>
 
+
+
+{{--    <div class="-mr-2 -my-2 md:hidden">--}}
+{{--        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">--}}
+{{--            <!-- Heroicon name: menu -->--}}
+{{--            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
+{{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />--}}
+{{--            </svg>--}}
+{{--        </button>--}}
+{{--    </div>--}}
+{{-- Hamburger icon --}}
 
 {{--<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">--}}
 {{--    <!-- Primary Navigation Menu -->--}}
@@ -435,9 +498,3 @@
 {{--    </div>--}}
 {{--</nav>--}}
 
-
-<!--
-  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
-  Read the documentation to get started: https://tailwindui.com/documentation
--->
-<!-- This example requires Tailwind CSS v1.4.0+ -->

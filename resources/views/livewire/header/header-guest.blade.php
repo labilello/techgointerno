@@ -67,38 +67,28 @@
 
 {{--</div>--}}
 
-<div class="relative bg-primary border-b border-white flex items-center">
-    <div class="px-4 mx-auto">
+<div class="relative bg-primary border-b border-white flex items-center ">
+    <div class="py-3 md:py-0 px-6 md:px-4 md:mx-auto">
         <a href="{{ route('index') }}">
-            <img class="h-8 block w-auto" src="{{ asset('resource/techgo-logo.svg') }}" alt="Logo" />
+            <img class="h-6 block" src="{{ asset('resource/techgo-logo.svg') }}" alt="Logo" />
         </a>
     </div>
 
-    <div class="-mr-2 -my-2 md:hidden">
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-            <!-- Heroicon name: menu -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-    </div> {{-- Hamburger icon --}}
-
-
-    <div class="hidden md:block md:flex-1">
+    <div class="flex-1">
         <div class="flex justify-between items-center w-full pr-4">
             {{-- TOP (NAV - USER) --}}
             <nav class="h-16 flex relative z-20">
 
             </nav>
 
-            <div class="flex items-center text-white transition duration-150 ease-in hover:text-teal-300">
-                <i class="fas fa-backward text-lg mr-2"></i>
+            <div class="flex items-center text-sm md:text-base text-white transition duration-150 ease-in hover:text-teal-300">
+                <i class="fas fa-backward md:text-lg mr-2"></i>
                 <a href="https://www.techgo.com.ar">Volver a techgo.com.ar</a>
             </div>
 
         </div>
         <div class="block" style="background: linear-gradient(to right,#00d9ff 0,#01ffb3 100%); height: 2px"></div>
-        <div class="flex justify-end py-3 text-secondary pr-4 mr-2">
+        <div class="flex justify-end text-sm md:text-base py-3 text-secondary pr-4 mr-2">
             {{ $pagename }}
         </div>
     </div>

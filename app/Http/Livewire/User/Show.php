@@ -40,7 +40,10 @@ class Show extends Component
             ->orderBy('name', 'ASC')
             ->paginate(15);
 
-//        $users->setPath('usuarios');
+//        if($this->name != '')
+//            dd($users);
+
+//        $users->setPath('');
 
         return view('livewire.user.show', [
             'users' => $users

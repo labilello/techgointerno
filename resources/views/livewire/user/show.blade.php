@@ -1,6 +1,7 @@
 <div>
     @livewire('user.filter')
 
+{{--    {{ $users->links('vendor.pagination.custom-paginator') }}--}}
     {{ $users->links('vendor.pagination.tailwind') }}
     @foreach($users as $user)
         @livewire('user.details', ['user' => $user], key($user->name))

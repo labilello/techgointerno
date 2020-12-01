@@ -16,12 +16,22 @@ module.exports = {
                 'tertiary': '#01daff',
                 'tertiary-dark': '#025aa5',
             },
+            borderColor: {
+                'primary': '#9b9b9b',
+                'primary-light': '#c7c7c7',
+                'secondary': '#01ffb2',
+                'tertiary': '#01daff',
+                'tertiary-dark': '#025aa5',
+            },
             backgroundColor: {
                 'primary': '#363636',
                 'primary-light': '#4b4f54',
                 'secondary': '#01ffb2',
                 'tertiary': '#00d6ff',
                 'tertiary-dark': '#025aa5',
+            },
+            height: {
+                "88": "22rem",
             },
         },
 

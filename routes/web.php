@@ -70,4 +70,7 @@ Route::namespace('Frontend')->group(function () {
     });
 });
 
+Route::get('/offline', function () {
+    return view('vendor/laravelpwa/offline');
+});
 //Route::redirect('/', './garantias');

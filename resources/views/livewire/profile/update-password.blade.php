@@ -43,15 +43,15 @@
     {{--    <x-jet-form-section submit="updateProfileInformation">--}}
     <div class="col-span-3 md:col-span-1 mt-2">
         <h3 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
+            {{ __('Actualizar tu contraseña') }}
         </h3>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            {{ __('Asegurate que tu cuenta esta protegida con una contraseña con varios caracteres y lo mas aleatorios posible.') }}
         </p>
     </div>
     <div class="col-span-3 md:col-span-2 shadow overflow-hidden sm:rounded-md">
-        <div class=" bg-white sm:p-6">
+        <div class="bg-white p-4 sm:p-6">
             <div>
                 @if (session()->has('message'))
                     <div class="@if(session()->has('type_message')) @if(session('type_message') == 'error') bg-red-200 border border-red-700 text-red-800 @endif @else bg-green-200 border-green-700 text-green-800 @endif w-full border rounded-sm py-3 px-4 mb-2">
@@ -63,33 +63,33 @@
             <!-- Current -->
             <div class="mt-1">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="current_password">
-                    {{ __('Current Password') }}
+                    {{ __('Contaseña Actual') }}
                 </label>
-                <input type="password" id="current_password" class="block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="current">
-                @error('current') <span class="error text-sm text-red-400">{{ $message }}</span> @enderror
+                <input type="password" id="current_password" class="text-sm sm:text-base block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="current">
+                @error('current') <span class="error text-xs sm:text-sm text-red-400">{{ $message }}</span> @enderror
             </div>
 
             <!-- New -->
             <div class="mt-2">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="password">
-                    {{ __('New Password') }}
+                    {{ __('Nueva Contraseña') }}
                 </label>
-                <input type="password" id="password" class="block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="password">
-                @error('password') <span class="error text-sm text-red-400">{{ $message }}</span> @enderror
+                <input type="password" id="password" class="text-sm sm:text-base block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="password">
+                @error('password') <span class="error text-xs sm:text-sm text-red-400">{{ $message }}</span> @enderror
             </div>
 
             <!-- Confirm -->
             <div class="mt-2">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="password_confirmation">
-                    {{ __('Confirm Password') }}
+                    {{ __('Confirma Contraseña') }}
                 </label>
-                <input type="password" id="password_confirmation" class="block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="password_confirmation" >
-                @error('password_confirmation') <span class="error text-sm text-red-400">{{ $message }}</span> @enderror
+                <input type="password" id="password_confirmation" class="text-sm sm:text-base block w-full rounded-md shadow-sm mt-1 py-2 px-3 border border border-gray-500" wire:model.lazy="password_confirmation" >
+                @error('password_confirmation') <span class="error text-xs sm:text-sm text-red-400">{{ $message }}</span> @enderror
             </div>
         </div>
 
-        <div class="bg-gray-400 py-3 flex justify-end px-4">
-            <button type="submit" class="px-3 py-2 bg-gray-800 text-white rounded-md">Guardar</button>
+        <div class="bg-gray-400 py-2 sm:py-3 flex justify-end px-4">
+            <button type="submit" class="px-3 py-1 sm:py-2 bg-gray-800 text-white rounded-md">Guardar</button>
         </div>
     </div>
 

@@ -36,7 +36,7 @@
 
         @foreach($results as $group=>$result)
             <div x-data={show:false} class="mb-2">
-                <div class="rounded-t-md border border-b-0 px-10 py-4 flex justify-between transition duration-150 ease-in hover:text-white @if($group == 'Otros centros de soporte') text-white bg-red-400 @else text-primary-light bg-primary-light @endif">
+                <div class="rounded-t-md border text-sm md:text-base border-b-0 px-4 py-2 md:px-10 md:py-4 flex justify-between transition duration-150 ease-in hover:text-white @if($group == 'Otros centros de soporte') text-white bg-red-400 @else text-primary-light bg-primary-light @endif">
                     <button @click="show=!show" class="text-left w-full focus:outline-none" type="button">
                         {{ $group }}
                     </button>
@@ -44,9 +44,9 @@
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                     </svg>
                 </div>
-                <div x-show="show" class="border px-10 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div x-show="show" class="border px-4 py-2 md:px-10 md:py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     @foreach($result as $brand)
-                        <a href="{{ route('warranty.details', ['warranty' => $brand->name]) }}" class="h-32 w-full text-center uppercase font-bold bg-green-400 px-8 py-3 flex justify-center items-center
+                        <a href="{{ route('warranty.details', ['warranty' => $brand->name]) }}" class="h-24 sm:h-32 w-full text-center uppercase font-bold bg-green-400 px-8 py-3 flex justify-center items-center
                                                     hover:bg-green-300">
                             @if( Storage::disk('local')->exists('public/marcas/' . $brand->name . '.svg')  )
                                 <img src="{{ asset('storage/marcas/'. $brand->name . '.svg') }}" alt="" class="h-full">

@@ -68,18 +68,18 @@
 {{--</div>--}}
 
 
-{{-- NORMAL HEADER --}}
-<div x-data="{ open: false }" :class="{'items-start flex-col': open, 'items-center flex-row': ! open}" class="flex relative bg-primary border-b border-white items-center justify-between">
-    <div class="py-3 px-4 md:py-0 md:px-4 md:mx-auto" :class="{'w-full text-center': open, '': ! open}">
+{{-- MD+ HEADER --}}
+<div class="hidden md:flex relative bg-primary border-b border-white items-center justify-between">
+    <div class="px-4 mx-auto">
         <a href="{{ route('index') }}">
             <img class="h-8 block w-auto" src="{{ asset('resource/techgo-logo.svg') }}" alt="Logo" />
         </a>
     </div>
 
-    <div class="hidden md:block md:flex-1">
+    <div class="block flex-1">
         <div class="flex justify-between items-center w-full pr-4">
             {{-- TOP (NAV - USER) --}}
-            <nav class="h-16 flex relative z-20" x-data="{ open: false }">
+            <nav class="h-16 flex relative z-20">
 
                 <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
                 <div class="relative group">
@@ -163,21 +163,6 @@
                                         </div>
                                     </a>
 
-{{--                                    <a href="#" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">--}}
-{{--                                        <!-- Heroicon name: cursor-click -->--}}
-{{--                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
-{{--                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />--}}
-{{--                                        </svg>--}}
-{{--                                        <div class="space-y-1">--}}
-{{--                                            <p class="text-base leading-6 font-medium text-gray-900">--}}
-{{--                                                {{ __('Seguros') }}--}}
-{{--                                            </p>--}}
-{{--                                            <p class="text-sm leading-5 text-gray-500">--}}
-{{--                                                Obtenga toda la información referida a los seguros vendidos por la compañia.--}}
-{{--                                            </p>--}}
-{{--                                        </div>--}}
-{{--                                    </a>--}}
-
                                     <a href="{{ route('users.list') }}" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
                                         <!-- Heroicon name: user-group -->
                                         <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -227,68 +212,6 @@
             {{ $pagename }}
         </div>
     </div>
-
-
-    <nav class="block md:hidden" :class="{'w-11/12 mx-auto my-0': open, '': ! open}">
-        <!-- Hamburger -->
-        <div class="mr-2 flex items-center sm:hidden">
-            <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                    <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Responsive Navigation Menu -->
-        <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-            <div class="pt-2 pb-3 space-y-1 text-white">
-                <a href="/" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-                    Inicio
-                </a>
-                <a href="/fotos" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-                    Imagenes de dispositivos
-                </a>
-                <a href="/soporte-tecnico" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-                    Soporte tecnico
-                </a>
-                <a href="/usuarios" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-                    Usuarios
-                </a>
-            </div>
-
-            <!-- Responsive Settings Options -->
-            <div class="pt-4 pb-1 border-t border-gray-200">
-                <div class="flex items-center px-4">
-                    <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="Profile image" />
-                    </div>
-
-                    <div class="ml-3">
-                        <div class="text-sm text-white font-bold uppercase">{{ Auth::user()->name }}</div>
-                        <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
-                    </div>
-                </div>
-
-                <div class="mt-3 space-y-1">
-                    <!-- Account Management -->
-                    <a href="/user/profile" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out">
-                        Mi perfil
-                    </a>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <a href="{{ route('logout') }}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-                           onclick="event.preventDefault(); this.closest('form').submit();"
-                        >
-                            Cerrar sesión
-                        </a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-
 {{--    <nav aria-label="primary" class="relative z-20 flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">--}}
 
 {{--        <div class="relative group">--}}
@@ -498,3 +421,91 @@
 {{--    </div>--}}
 {{--</nav>--}}
 
+
+
+{{-- MD- HEADER --}}
+<div x-data="{ open: false }" :class="{'': open, '': ! open}" class="flex flex-col md:hidden relative bg-primary border-b border-white items-center justify-between">
+    <div class="block w-full" style="background: linear-gradient(to right,#00d9ff 0,#01ffb3 100%); height: 2px"></div>
+
+    <div class="py-3 px-4 flex justify-between items-center w-full">
+        <!-- Logo -->
+        <a href="{{ route('index') }}">
+            <img class="h-8 w-auto" src="{{ asset('resource/techgo-logo.svg') }}" alt="Logo" />
+        </a>
+
+        <!-- Hamburger -->
+        <div class="-mr-2 flex items-center sm:hidden">
+            <button @click="open = ! open" class="inline-flex items-center justify-center p-1 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <nav class="w-full my-0 overflow-hidden transition-all duration-500 ease-out" :class="{'h-96 ': open, 'h-0': ! open}">
+        <!-- Responsive Navigation Menu -->
+        <ul class="pt-2 pb-3 space-y-1 text-white text-sm">
+            <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary transition-all duration-150 ease-in-out">
+                <a href="/" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                <a href="/fotos" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                    Imagenes de dispositivos
+                </a>
+            </li>
+
+            <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                <a href="/soporte-tecnico" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                    Soporte tecnico
+                </a>
+            </li>
+
+            <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                <a href="/usuarios" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                    Usuarios
+                </a>
+            </li>
+        </ul>
+
+        <!-- Responsive Settings Options -->
+        <ul class="pt-4 pb-1 border-t border-gray-200">
+            <li class="flex items-center px-4">
+                <div class="flex-shrink-0">
+                    <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="Profile image" />
+                </div>
+
+                <div class="ml-3">
+                    <div class="text-sm text-white font-bold uppercase">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-xs text-white">{{ Auth::user()->email }}</div>
+                </div>
+            </li>
+
+            <ul class="mt-3 space-y-1 text-sm">
+                <!-- Account Management -->
+                <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                    <a href="/user/profile" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                        Mi perfil
+                    </a>
+                </li>
+                <form method="POST" action="{{ route('logout') }}" class="text-white hover:text-tertiary hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                    @csrf
+                    <a href="{{ route('logout') }}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300"
+                       onclick="event.preventDefault(); this.closest('form').submit();"
+                    >
+                        Cerrar sesión
+                    </a>
+                </form>
+            </ul>
+        </ul>
+
+        <div class="mx-4">
+            <a href="#" id="buttonInstall" class="block py-2 border-2 border-tertiary text-center text-tertiary hover:bg-tertiary-dark hover:text-white transition-all duration-150 ease-in-out"><i class="fas fa-download mr-2"></i>Instalar App</a>
+        </div>
+    </nav>
+
+</div>

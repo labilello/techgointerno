@@ -1,5 +1,5 @@
 <div x-data={isVisible:false}>
-    <button @click="isVisible=!isVisible" type="button" class="outline-none w-full mt-1 p-3 bg-secondary border-2 rounded-lg flex items-center transition duration-500 ease-in-out hover:bg-gray-100 ">
+    <button @click="isVisible=!isVisible" type="button" class="outline-none w-full mt-1 p-3 bg-green-100 border-2 rounded-lg flex items-center transition duration-500 ease-in-out hover:bg-gray-100 ">
         <img class="h-10 w-10 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="Image" />
         <div class="ml-3 text-left">
             <h4 class="block font-semibold text-sm sm:text-lg text-black">{{ $user->name }}</h4>

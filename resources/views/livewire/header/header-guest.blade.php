@@ -75,7 +75,7 @@
     </div>
 
     <div class="flex-1">
-        <div class="flex justify-between items-center w-full pr-4">
+        <div class="flex justify-end items-center w-full pr-4 py-2">
             {{-- TOP (NAV - USER) --}}
 
             <div class="flex items-center text-sm md:text-base text-white transition duration-150 ease-in hover:text-teal-300">

@@ -504,7 +504,7 @@
         </ul>
 
         <div class="mx-4">
-            <a href="#" id="buttonInstall" class="block py-2 border-2 border-tertiary text-center text-tertiary hover:bg-tertiary-dark hover:text-white transition-all duration-150 ease-in-out"><i class="fas fa-download mr-2"></i>Instalar App</a>
+            <a href="#" id="buttonInstall" class="hidden py-2 border-2 border-tertiary text-center text-tertiary hover:bg-tertiary-dark hover:text-white transition-all duration-150 ease-in-out"><i class="fas fa-download mr-2"></i>Instalar App</a>
         </div>
     </nav>
 

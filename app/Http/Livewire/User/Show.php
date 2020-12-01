@@ -32,14 +32,18 @@ class Show extends Component
 
     public function render()
     {
+        $users = User::where('name', 'LIKE', "%$this->name%")
+            ->where('role', 'LIKE', "%$this->role%")
+            ->where('legajo', 'LIKE', "%$this->legajo%")
+            ->where('sector', 'LIKE', "%$this->sector%")
+            ->where('store_id', 'LIKE', $this->store)
+            ->orderBy('name', 'ASC')
+            ->paginate(15);
+
+//        $users->setPath('usuarios');
+
         return view('livewire.user.show', [
-            'users' => User::where('name', 'LIKE', "%$this->name%")
-                ->where('role', 'LIKE', "%$this->role%")
-                ->where('legajo', 'LIKE', "%$this->legajo%")
-                ->where('sector', 'LIKE', "%$this->sector%")
-                ->where('store_id', 'LIKE', $this->store)
-                ->orderBy('name', 'ASC')
-                ->paginate(15)
+            'users' => $users
         ]);
     }
 }

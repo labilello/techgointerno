@@ -5,7 +5,7 @@ return [
     'name' => 'Omar Barbosa',
     'manifest' => [
         'name' => env('APP_NAME', 'TechgoInterno'),
-        'short_name' => 'TG - Interno',
+        'short_name' => 'Techgo - Interno',
         'start_url' => '/',
         'background_color' => '#4b4f54',
         'theme_color' => '#000000',

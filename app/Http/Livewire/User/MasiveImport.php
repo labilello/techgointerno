@@ -30,7 +30,7 @@ class MasiveImport extends Component
             $store = Store::where('name', 'LIKE', "%$data[5]%")->first();
 
             $user = User::create([
-                'name'      => ucwords(strtolower("$data[1] $data[2]")),
+                'name'      => ucwords(strtolower("$data[2] $data[1]")),
                 'legajo'    => $data[0],
                 'phones'    => array(),
                 'sector'    => $data[3],

@@ -68,7 +68,7 @@
         </div>
 
 
-        <div class="flex flex-col md:grid md:gap-20 md:grid-cols-12">
+        <div class="flex flex-col md:grid md:gap-14 md:grid-cols-12">
             <div class="col-span-12 md:col-span-8 col-start-1"> {{-- LADO IZQUIERDO --}}
 
                 @if( count($warranty->devices) > 0)
@@ -139,7 +139,7 @@
 
                         @foreach($warranty->externalContact as $contact)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
-                                <dt class="w-7/12">{{ $contact['externalContactName'] }}</dt>
+                                <dt class="w-6/12">{{ $contact['externalContactName'] }}</dt>
                                 <dd class="flex-1 text-right transition duration-150 ease-in hover:text-tertiary-dark">
                                     @if($contact['externalContactType'] == 'Telefono')
                                         <a href="tel:{{ $contact['externalContactValue'] }}" class="block">{{ $contact['externalContactValue'] }} <i class="ml-1 fas fa-phone text-tertiary-dark"></i></a>
@@ -160,7 +160,7 @@
     {{--                    @dd($warranty->internalContacts)--}}
                         @foreach($warranty->internalContacts as $user)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
-                                <dt class="w-6/12 mb-3">
+                                <dt class="w-5/12 mb-3">
                                     <p class="m-0 leading-3 block ">{{ $user->name }}</p>
                                     <small class="text-green-500 font-semibold">{{ $user->sector }}</small>
                                 </dt>

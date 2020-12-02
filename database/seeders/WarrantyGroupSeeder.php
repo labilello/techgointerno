@@ -14,8 +14,8 @@ class WarrantyGroupSeeder extends Seeder
      */
     public function run()
     {
-        WarrantyGroup::create(['name' => 'Garantías Marcas Nacionales']);
-        WarrantyGroup::create(['name' => 'Garantías Marcas Propias']);
+        WarrantyGroup::create(['name' => 'Soporte TechGo']);
         WarrantyGroup::create(['name' => 'Garantías extendidas']);
+        WarrantyGroup::create(['name' => 'Otros centros de soporte']);
     }
 }

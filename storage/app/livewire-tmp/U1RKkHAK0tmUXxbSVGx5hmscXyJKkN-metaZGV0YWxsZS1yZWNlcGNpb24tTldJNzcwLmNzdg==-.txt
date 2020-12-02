@@ -1,0 +1,4 @@
+"Patente"
+"NWI770"
+"ID Categoría","Categoría","ID Producto","Producto","Marca","Estado","Pendiente","Stock libre"
+"377","Celulares Libres","268429","Celular Libre Samsung Galaxy Note 10 _SM-N970FZKL+Galaxy Buds Negro ","Samsung","Ok","1","0"

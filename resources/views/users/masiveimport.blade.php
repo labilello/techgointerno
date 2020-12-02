@@ -3,7 +3,7 @@
             {{ __('Usuarios / Importación Masiva') }}
     </x-slot>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="md:grid md:grid-cols-6 md:gap-12">
             <div class="col-span-2 mb-4 md:mb-0">
                 <h3 class="text-lg font-medium text-gray-900">Creación masiva de usuarios</h3>

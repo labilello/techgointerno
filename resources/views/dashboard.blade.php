@@ -3,7 +3,7 @@
         {{ __('Pagina principal') }}
     </x-slot>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <div class="w-6/8 p-5 md:p-6 text-black text-sm md:text-base">
                 <span class="font-semibold block text-lg md:text-2xl mb-2">¡Bienvenido al nuevo sitio de uso interno de TechGo!</span>

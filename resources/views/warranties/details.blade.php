@@ -3,7 +3,7 @@
         {{ __('Marcas') }} - {{ $warranty->name }}
     </x-slot>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-2">
             @if( $warranty->name == 'Asus' )
                 <div class="text-xs sm:text-base flex justify-between items-center bg-yellow-200 relative text-yellow-600 py-3 px-4 sm:px-6 rounded-lg">
@@ -135,7 +135,7 @@
 
                 @if( count($warranty->externalContact) > 0)
                     <div class="mb-3"> {{-- Contacto externo --}}
-                        <h5 class="text-base sm:text-xl text-tertiary font-semibold ">Contacto Externo</h5>
+                        <h5 class="text-base sm:text-xl text-purple-800	font-semibold ">Contacto Externo</h5>
 
                         @foreach($warranty->externalContact as $contact)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
@@ -155,7 +155,7 @@
 
                 @if( count($warranty->internalContacts) > 0)
                     <div> {{-- Contacto interno --}}
-                        <h5 class="text-base sm:text-xl mb-1 text-tertiary font-semibold">Contacto Interno</h5>
+                        <h5 class="text-base sm:text-xl mb-1 text-purple-800 font-semibold">Contacto Interno</h5>
 
     {{--                    @dd($warranty->internalContacts)--}}
                         @foreach($warranty->internalContacts as $user)
@@ -184,7 +184,7 @@
 
                 @if( count($warranty->internalLinks) > 0)
                     <div> {{-- Enlaces utiles --}}
-                        <h5 class="text-base sm:text-xl mb-2 text-tertiary font-semibold">Enlaces útiles para tecnicos</h5>
+                        <h5 class="text-base sm:text-xl mb-2 text-purple-800 font-semibold">Enlaces útiles para tecnicos</h5>
 
                         @foreach($warranty->internalLinks as $link)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">

@@ -19,9 +19,9 @@
     </div>
 
     <div class="relative flex flex-col flex-grow mb-3">
-        <div class="flex flex-col w-full bg-white border-2 border-gray-300 border-solid rounded-md hover:shadow-outline-gray hover:cursor-pointer py-3 text-center">
+        <div class="flex flex-col w-full bg-white border-2 border-gray-300 border-solid rounded-md hover:shadow-outline-gray cursor-pointer py-3 text-center">
             <input type="file" multiple
-                   class="absolute inset-0 z-10 m-0 p-0 w-full h-full outline-none opacity-0 hover:cursor-pointer"
+                   class="absolute inset-0 z-10 m-0 p-0 w-full h-full outline-none opacity-0 cursor-pointer"
                    wire:model="inputTempFiles"
                    accept="image/*"
             >

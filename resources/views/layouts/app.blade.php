@@ -24,7 +24,7 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
     </head>
     <body class="font-opensans antialiased">
-        <div class="min-h-screen bg-gray-300">
+        <div class="min-h-screen bg-gray-200">
             @livewire('header.header', ['pagename' => $header->__toString()])
 
             <!-- Page Content -->

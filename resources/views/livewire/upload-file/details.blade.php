@@ -6,7 +6,7 @@
     <div :class="{'px-3 py-2 h-auto opacity-100': isVisible, 'p-0 opacity-0 h-0': !isVisible }" class="text-sm md:text-base text-gray-600 border-blue-200 rounded-b border-2 border-t-0 mx-px bg-blue-200 overflow-hidden transition-all duration-500 ease-out">
 
         <div wire:loading class="items-center font-medium w-full">
-            <img src="{{ asset('resource/oval.svg') }}" alt="" class="mr-2 inline-block transition ease-in-out duration-150 cursor-not-allowed">
+            <img src="{{ asset('resource/oval.svg') }}" alt="" class="mr-2 inline-block transition-all ease-in-out duration-150 cursor-not-allowed">
             Cargando archivos...
         </div>
 

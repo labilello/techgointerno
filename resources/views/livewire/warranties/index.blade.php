@@ -1,8 +1,97 @@
 <div>
-    <div class="flex flex-col md:flex-row ">
-        <div class="w-full md:w-5/12">
-            <input wire:model="search_query" type="text" placeholder="Ejemplo: Samsung" class="rounded py-2 px-3 w-full border-2 border-solid ">
-            <div class="flex items-center mt-2" wire:loading wire:target="search_query">
+    <div class="flex flex-col md:grid md:grid-cols-12 md:gap-x-14">
+        {{-- Primera linea --}}
+        <div x-data="{ show: false }" class=" md:col-span-4">
+            <div class="">
+                <button @click={show=true} type="button" class="w-full mb-2 px-4 bg-green-400 text-white py-2 md:py-3 transition-all duration-500 ease-in-out hover:border-gray-500 hover:bg-red-500 cursor-pointer">Periodos de Garantía</Button>
+            </div>
+            <div x-show="show" tabindex="0" class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+                <div  @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
+                    <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
+                        <button @click={show=false} class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                        <div class="px-6 py-3 text-xl border-b font-bold">Periodos de Garantías</div>
+                        <div class="p-6 flex-grow text-xs sm:text-sm md:text-base">
+                            <dl class="grid grid-cols-12">
+                                <dt class="col-span-7 font-bold">Garantía de Reparacion</dt>
+                                <dd class="col-span-5 uppercase mb-1">3 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Equipos de Outlet</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Smartphones</dt>
+                                <dd class="col-span-5 uppercase mb-1">
+                                    <dl class="grid grid-cols-12 mb-0 text-xs md:text-sm">
+                                        <dt class="col-span-7 font-bold">Datsun</dt>
+                                        <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+                                        <dt class="col-span-7 font-bold">Otros</dt>
+                                        <dd class="col-span-5 uppercase">12 meses</dd>
+                                    </dl>
+                                </dd>
+
+                                <dt class="col-span-7 font-bold">Baterias Smartphone Internas</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Baterias Smartphone Externas</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Notebooks</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Tablets</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Computadoras</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Accesorios</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Purificadores</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Lavavajillas</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Cavas</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Mixer</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Jarras Termicas</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Tostadoras</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Cafeteras</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Aires Acondicionados</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+                            </dl>
+                        </div>
+                        <div class="px-6 py-3 border-t">
+                            <div class="flex justify-end">
+                                <button @click={show=false} type="button" class="bg-gray-700 text-gray-100 rounded px-4 py-2 mr-1">Cerrar</Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50"></div>
+            </div>
+        </div>
+
+        <div class=" md:col-span-8">
+            <div class="flex items-center">
+                <svg class="w-4 h-4 fill-current text-gray-500 ml-4 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input wire:model="search_query" type="text" placeholder="Ejemplo: Samsung" class="w-full -ml-8 pl-10 px-4 py-2 md:py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"/>
+            </div>
+        </div>
+
+        {{-- Segunda linea --}}
+        <div class="mt-2 md:col-span-4 md:mt-0">
+            <div wire:loading  wire:target="search_query">
                 <svg class="inline-flex" width="25" height="25" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#025aa5">
                     <g fill="none" fill-rule="evenodd">
                         <g transform="translate(1 1)" stroke-width="2">
@@ -22,10 +111,12 @@
                 <span class="ml-2 text-sm font-bold text-tertiary-dark">Buscando coincidencias...</span>
             </div>
         </div>
-        <div class="w-full md:7/12 mb-2 mt-2 md:ml-6">
+
+        <div class=" md:col-span-8 ml-1 mt-2 md:mt-1">
             <p class="text-primary text-sm block"><span class="mr-1 font-bold">AYUDA:</span>Si utiliza el buscador, solo se mostraran las marcas que concuerden con la busqueda.</p>
-{{--            <br>Puede encontrar el periodo de garantía para cada marca en información general!--}}
+            {{--            <br>Puede encontrar el periodo de garantía para cada marca en información general!--}}
         </div>
+
 
     </div>
 

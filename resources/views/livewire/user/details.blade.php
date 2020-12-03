@@ -3,7 +3,7 @@
         <img class="h-10 w-10 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="Image" />
         <div class="ml-3 text-left">
             <h4 class="block font-semibold text-sm sm:text-lg text-black">{{ $user->name }}</h4>
-            <p class="text-sm text-gray-500">{{ $user->sector }} - {{ $user->store->name }}</p>
+            <p class="text-xs sm:text-sm text-gray-500">{{ $user->sector }} - {{ $user->store->name }}</p>
         </div>
     </button>
     <address :class="{'px-2 sm:px-5 py-3 h-auto opacity-100': isVisible, 'p-0 opacity-0 h-0': !isVisible }" class="mx-1 -mt-px text-xs sm:text-sm text-primary-light rounded bg-primary overflow-hidden grid grid-flow-row transition-all duration-500 ease-out">
@@ -17,10 +17,12 @@
             <span>{{ $user->legajo }}</span>
         </div>
 
-        <div>
-            <p class="font-semibold w-20 sm:w-24 inline-block">Email:</p>
-            <span>{{ $user->email }}</span>
-        </div>
+        @if($user->email != '')
+            <div>
+                <p class="font-semibold w-20 sm:w-24 inline-block">Email:</p>
+                <span>{{ $user->email }}</span>
+            </div>
+        @endif
 
         @foreach($user->phones as $phone)
             <div>

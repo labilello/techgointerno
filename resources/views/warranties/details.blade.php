@@ -21,7 +21,7 @@
                 <div class="text-xs sm:text-base flex justify-between items-center bg-yellow-200 relative text-yellow-600 py-3 px-4 sm:px-6 rounded-lg">
                     <div>
                         <span class="font-semibold text-yellow-700">¡ATENCIÓN!</span>
-                        A excepcion de otras marcas, los Smartphones de esta marca poseen un periodo de garantía de <strong>6 MESES</strong>
+                        A excepcion de otras marcas, los Smartphones de esta marca poseen un periodo de garantía de <strong>6 MESES</strong> a menos que el certificado de garantia indique lo contrario
                     </div>
                     <div>
                         <button type="button" class=" text-yellow-700">
@@ -68,8 +68,8 @@
         </div>
 
 
-        <div class="flex flex-col md:grid md:gap-14 md:grid-cols-12">
-            <div class="col-span-12 md:col-span-8 col-start-1"> {{-- LADO IZQUIERDO --}}
+        <div class="flex flex-col lg:grid lg:gap-14 lg:grid-cols-12">
+            <div class="col-span-12 lg:col-span-8 col-start-1"> {{-- LADO IZQUIERDO --}}
 
                 @if( count($warranty->devices) > 0)
                     <div class="mb-4"> {{-- LISTA EQUIPOS --}}
@@ -130,7 +130,7 @@
 
             </div> {{-- Fin lado izquierdo --}}
 
-            <div class="col-span-12 md:col-span-4 md:col-start-9 col-start-1"> {{-- LADO DERECHO --}}
+            <div class="col-span-12 lg:col-span-4 lg:col-start-9 col-start-1"> {{-- LADO DERECHO --}}
                 <h4 class="text-lg sm:text-2xl  font-semibold text-green-500 ">Información adicional</h4>
 
                 @if( count($warranty->externalContact) > 0)
@@ -140,7 +140,7 @@
                         @foreach($warranty->externalContact as $contact)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
                                 <dt class="w-6/12">{{ $contact['externalContactName'] }}</dt>
-                                <dd class="flex-1 text-right transition duration-150 ease-in hover:text-tertiary-dark">
+                                <dd class="flex-1 text-right transition-all duration-150 ease-in hover:text-tertiary-dark">
                                     @if($contact['externalContactType'] == 'Telefono')
                                         <a href="tel:{{ $contact['externalContactValue'] }}" class="block">{{ $contact['externalContactValue'] }} <i class="ml-1 fas fa-phone text-tertiary-dark"></i></a>
                                     @elseif($contact['externalContactType'] == 'Link')
@@ -161,17 +161,17 @@
                         @foreach($warranty->internalContacts as $user)
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
                                 <dt class="w-5/12 mb-3">
-                                    <p class="m-0 leading-3 block ">{{ $user->name }}</p>
+                                    <p class="m-0 leading-none block ">{{ $user->name }}</p>
                                     <small class="text-green-500 font-semibold">{{ $user->sector }}</small>
                                 </dt>
-                                <dd class="flex-1 text-sm text-right">
+                                <dd class="flex-1 text-xs sm:text-sm text-right">
                                     @foreach($user->phones as $phone)
-                                        <div class="block transition duration-150 ease-in hover:text-tertiary-dark">
+                                        <div class="block transition-all duration-150 ease-in hover:text-tertiary-dark">
                                             <a href="tel:{{ $phone }}">{{ $phone }}</a>
                                             <i class="ml-1 fas fa-phone text-tertiary-dark"></i>
                                         </div>
                                     @endforeach
-                                        <div class="block transition duration-150 ease-in hover:text-tertiary-dark">
+                                        <div class="block transition-all duration-150 ease-in hover:text-tertiary-dark">
                                             <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
                                             <i class="ml-1 fas fa-envelope text-tertiary-dark"></i>
                                         </div>
@@ -190,7 +190,7 @@
                             <dl class="mb-1 text-gray-700 text-xs sm:text-base flex flex-wrap">
                                 <dt class="w-7/12">{{ $link['internalLinksType'] }}</dt>
                                 <dd class="flex-1 text-right">
-                                    <a href="{{ $link['internalLinksValue'] }}" class="block transition duration-150 ease-in hover:text-tertiary-dark">Acceso al sitio <i class="ml-1 fas fa-external-link-alt text-tertiary-dark"></i></a>
+                                    <a href="{{ $link['internalLinksValue'] }}" class="block transition-all duration-150 ease-in hover:text-tertiary-dark">Acceso al sitio <i class="ml-1 fas fa-external-link-alt text-tertiary-dark"></i></a>
                                 </dd>
                             </dl>
                         @endforeach

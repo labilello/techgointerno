@@ -30,7 +30,7 @@ class UpdateInformation extends Component
             'name' => 'required|min:6',
             'email' => 'required|email',
             'phones' => ['nullable', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:8'],
-            'photo' => ['nullable', 'image', 'max:1024'],
+            'photo' => ['nullable', 'image', 'max:5120'],
         ]);
 
         // PHOTO

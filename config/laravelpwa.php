@@ -2,13 +2,13 @@
 
 
 return [
-    'name' => 'Omar Barbosa',
+    'name' => 'TechGo Interno',
     'manifest' => [
         'name' => env('APP_NAME', 'TechgoInterno'),
-        'short_name' => 'Techgo - Interno',
+        'short_name' => 'TechGo - Interno',
         'start_url' => '/',
-        'background_color' => '#4b4f54',
-        'theme_color' => '#000000',
+        'background_color' => '#3e3e3e',
+        'theme_color' => '#3e3e3e',
         'display' => 'standalone',
         'orientation'=> 'any',
         'status_bar'=> 'green',

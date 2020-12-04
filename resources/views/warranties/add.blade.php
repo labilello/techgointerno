@@ -231,7 +231,7 @@
                                 <select class="rounded py-1 px-2 w-full border-2 border-solid mr-2" x-bind:name=`internalContact[]` required>
                                     <option hidden value="">Seleccione elemento</option>
                                     @foreach($users as $user)
-                                        <option value="{{ $user->id }}">{{ $user->id }} - {{ $user->name }} - {{ $user->sector }}</option>
+                                        <option value="{{ $user->id }}">{{ $user->name }} - {{ $user->sector }}</option>
                                     @endforeach
                                 </select>
                                 <button type="button" class="text-center text-red-600 font-extrabold" @click="removeField(index)">&cross;</button>

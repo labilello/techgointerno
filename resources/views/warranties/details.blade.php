@@ -3,7 +3,7 @@
         {{ __('Marcas') }} - {{ $warranty->name }}
     </x-slot>
 
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ modal: false }">
         <div class="mb-2">
             @if( $warranty->name == 'Asus' )
                 <div class="text-xs sm:text-base flex justify-between items-center bg-yellow-200 relative text-yellow-600 py-3 px-4 sm:px-6 rounded-lg">
@@ -41,6 +41,18 @@
                         </button>
                     </div>
                 </div>
+            @elseif( $warranty->name == 'Next' )
+                <div class="text-xs sm:text-base flex justify-between items-center bg-yellow-200 relative text-yellow-600 py-3 px-4 sm:px-6 rounded-lg">
+                    <div>
+                        <span class="font-semibold text-yellow-700">¡ATENCIÓN!</span>
+                        El periodo de garantìa para esta marca es de <strong>12 MESES</strong> para los casos cubertos por TechGo y de <strong>6 MESES</strong> para los casos cubiertos por Arq Design - Gonna
+                    </div>
+                    <div>
+                        <button type="button" class=" text-yellow-700">
+                            <span class="text-2xl">&times;</span>
+                        </button>
+                    </div>
+                </div>
             @elseif( $warranty->name == 'Nintendo' )
                 <div class="mb-1 text-xs sm:text-base flex justify-between items-center bg-yellow-200 relative text-yellow-600 py-3 px-4 sm:px-6 rounded-lg">
                     <div>
@@ -68,7 +80,7 @@
         </div>
 
 
-        <div class="flex flex-col lg:grid lg:gap-14 lg:grid-cols-12">
+        <div class="flex flex-col lg:grid lg:gap-8 lg:grid-cols-12">
             <div class="col-span-12 lg:col-span-8 col-start-1"> {{-- LADO IZQUIERDO --}}
 
                 @if( count($warranty->devices) > 0)
@@ -90,7 +102,16 @@
                                         <td class="pl-1 font-weight-bold text-black-50 ">{{ $device['deviceType'] }}</td>
                                         <td class="text-center"><i class="fas my-auto @isset($device['inWarranty']) fa-check-circle text-green-400 @else fa-times-circle text-red-400 @endisset text-lg"></i></td>
                                         <td class="text-center"><i class="fas my-auto @isset($device['outWarranty']) fa-check-circle text-green-400 @else fa-times-circle text-red-400 @endisset text-lg"></i></td>
-                                        <td class="pr-1 text-center "><small>{{ $device['origin']}}</small></td>
+                                        <td class="pr-1 text-center ">
+                                            <small>
+                                                @if( $device['origin'] == 'Ver autorizados por JVLAT' )
+                                                    <button type="button" @click={modal=true}>{{ $device['origin'] }}</button>
+                                                @else
+                                                    {{ $device['origin'] }}
+                                                @endif
+
+                                            </small>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -199,5 +220,52 @@
             </div> {{-- Fin lado derecho --}}
         </div>
 
+
+        <div x-show="modal" tabindex="0" class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
+            <div  @click.away="modal=false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
+                <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
+                    <button @click={modal=false} class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
+                    <div class="px-6 py-3 text-xl border-b font-bold">Distribuidores autorizados por JVLAT</div>
+                    <div class="p-6 flex-grow text-xs sm:text-sm md:text-base">
+                        <ul>
+                            <li>- Bazar Avenida S.A. (Megatone)</li>
+                            <li>- Carsa S.A.</li>
+                            <li>- Cetrogar S.A.</li>
+                            <li>- Compumundo S.A.</li>
+                            <li>- Electronica Megatone S.A.</li>
+                            <li>- Falabella S.A.</li>
+                            <li>- Fravega</li>
+                            <li>- Garbarino S.A.I.C. e I.</li>
+                            <li>- Inc. Sociedad Anonica (Carrefour)</li>
+                            <li>- Naldo Lombardi S.A.</li>
+                            <li>- Ribeiro S.A.I.C. e I.</li>
+                            <li>- S.A. Importadora y Exportadora de la Patagonia (La Anonima)</li>
+                            <li>- SVET S.A. (ET)</li>
+                            <li>- Player S.R.L. (The best)</li>
+                            <li>- AG Rush S.R.L</li>
+                            <li>- Memotec S.A. (CD MARKET)</li>
+                            <li>- Shine S.A.</li>
+                            <li>- Premium MPM S.A. (Sony Center)</li>
+                            <li>- PC ARTS Argentina S.A.</li>
+                            <li>- Coppel S.A.</li>
+                            <li>- Bosan S.A. (Rodo)</li>
+                            <li>- Brightstar Argentina S.A.</li>
+                            <li>- Rama Gaston Ezequiel</li>
+                            <li>- Walmart Argentina S.R.L.</li>
+                            <li>- Ansila S.A.</li>
+                            <li>- Bianuchi Claudia Alicia</li>
+                            <li>- A. Grimaldi, S. Vallejos y A. Vallejos SH (Gamebox)</li>
+                            <li>- Legnani German Alejandro (Play Games)</li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-3 border-t">
+                        <div class="flex justify-end">
+                            <button @click={modal=false} type="button" class="bg-gray-700 text-gray-100 rounded px-4 py-2 mr-1">Cerrar</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed bg-black opacity-50"></div>
+        </div>
     </div>
 </x-app-layout>

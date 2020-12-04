@@ -1,13 +1,13 @@
 let deferredPrompt;
 const buttonInstall = document.querySelector("#buttonInstall");
 
-
 window.addEventListener('DOMContentLoaded', () => {
+
     buttonInstall.addEventListener('click', () => {
         const promptEvent = window.deferredPrompt;
         if (!promptEvent) {
             console.log('👍', 'NO PROMT');
-            alert("Su navegador no es compatible para realizar la instalaciòn. Reintente con Chrome o Safari")
+            alert("Esta opcion estará disponible pronto!")
             // The deferred prompt isn't available.
             return;
         }
@@ -23,8 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
             buttonInstall.classList.toggle('hidden', true);
         });
     });
-
-
 
     // let displayMode = 'browser tab';
     // if (navigator.standalone) {

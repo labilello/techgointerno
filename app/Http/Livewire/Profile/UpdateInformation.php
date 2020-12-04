@@ -30,7 +30,7 @@ class UpdateInformation extends Component
             'name' => 'required|min:6',
             'email' => 'required|email',
             'phones' => ['nullable', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:8'],
-            'photo' => ['nullable', 'image', 'max:10000'],
+            'photo' => 'nullable|image|max:10000',
         ]);
 
         // PHOTO
@@ -55,8 +55,8 @@ class UpdateInformation extends Component
     {
         $this->validateOnly($field, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($this->user->id)],
-            'photo' => ['nullable', 'image', 'max:1024'],
+            'email' => ['required', 'email', 'max:255'],
+            'photo' => ['nullable', 'image', 'max:10000'],
             'phones' => ['nullable', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:8'],
         ]);
     }

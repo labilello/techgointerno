@@ -23,7 +23,7 @@
                 {{ __('Photo') }}
             </label>
 
-            <div x-data="{photoName: null, photoPreview: null}" class="flex items-center">
+            <div x-data="{photoName: null, photoPreview: null}" class="flex items-center flex-wrap">
                 <!-- Profile Photo File Input -->
                 <input type="file" class="hidden" accept="image/*"
                        wire:model="photo"

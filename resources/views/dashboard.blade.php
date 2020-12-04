@@ -8,6 +8,7 @@
             <div class="w-6/8 p-5 md:p-6 text-black text-sm md:text-base">
                 <span class="font-semibold block text-lg md:text-2xl mb-2">¡Bienvenido al nuevo sitio de uso interno de TechGo!</span>
                 Estamos trabajando para que tengas la información necesaria sobre TechGo al alcance de la mano y siempre actualizada.
+                <span class="block">Por consultas o informar errores, busque los datos de contacto en la seccion de "Usuarios" de <strong>Leandro Bilello</strong> e informelo!</span>
             </div>
         </div>
 

@@ -17,7 +17,7 @@ class Input extends Component
 
     public function updatedInputTempFiles() {
         $this->validate([
-            'inputTempFiles.*' => 'image|max:5120', // 1MB Max
+            'inputTempFiles.*' => 'image|max:10000', // 1MB Max
         ]);
 
         foreach ($this->inputTempFiles as $file)

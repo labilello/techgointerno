@@ -34,12 +34,12 @@
     <form wire:submit.prevent="storePhotos">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
 
-{{--            @if(count($tempFiles) > 0)--}}
+            @if(count($tempFiles) > 0)
                 <div class="flex col-span-2 sm:col-span-3 flex-no-wrap">
                     <label for="order" class="flex flex-col justify-center mb-0 -mr-px px-3 border rounded-l bg-gray-600 text-white text-center text-xs md:text-sm">Numero de solicitud:</label>
                     <input type="text" wire:model="order" id="order" placeholder="20201006-000041" class="rounded-r py-1 px-2 border-2 border-solid text-sm sm:text-base" required>
                 </div>
-{{--            @endif--}}
+            @endif
 
 
             @foreach($tempFiles as $index=>$item)

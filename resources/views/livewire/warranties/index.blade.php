@@ -40,7 +40,7 @@
                                 <dt class="col-span-7 font-bold">Tablets</dt>
                                 <dd class="col-span-5 uppercase mb-1">12 meses</dd>
 
-                                <dt class="col-span-7 font-bold">Computadoras</dt>
+                                <dt class="col-span-7 font-bold">PCs Escritorio</dt>
                                 <dd class="col-span-5 uppercase mb-1">12 meses</dd>
 
                                 <dt class="col-span-7 font-bold">Accesorios</dt>
@@ -55,7 +55,7 @@
                                 <dt class="col-span-7 font-bold">Cavas</dt>
                                 <dd class="col-span-5 uppercase mb-1">12 meses</dd>
 
-                                <dt class="col-span-7 font-bold">Mixer</dt>
+                                <dt class="col-span-7 font-bold">Mixers</dt>
                                 <dd class="col-span-5 uppercase mb-1">6 meses</dd>
 
                                 <dt class="col-span-7 font-bold">Jarras Termicas</dt>
@@ -69,6 +69,33 @@
 
                                 <dt class="col-span-7 font-bold">Aires Acondicionados</dt>
                                 <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Parlantes</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Microcomponentes</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Reproductores DVD</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Impresoras</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Maquinas de Coser</dt>
+                                <dd class="col-span-5 uppercase mb-1">12 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Maquinas de Bordar</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Cintas de Correr</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Bicicletas Fijas</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
+
+                                <dt class="col-span-7 font-bold">Caminadoras</dt>
+                                <dd class="col-span-5 uppercase mb-1">6 meses</dd>
                             </dl>
                         </div>
                         <div class="px-6 py-3 border-t">

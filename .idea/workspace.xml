@@ -154,7 +154,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/livewire/header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -231,7 +231,8 @@
       <workItem from="1606932638200" duration="966000" />
       <workItem from="1606951720675" duration="10230000" />
       <workItem from="1607084733848" duration="10383000" />
-      <workItem from="1607519843559" duration="319000" />
+      <workItem from="1607519843559" duration="1112000" />
+      <workItem from="1607608513253" duration="2247000" />
     </task>
     <servers />
   </component>
@@ -261,9 +262,10 @@
     <state x="413" y="-650" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/0.-768.1366.728@0.-768.1366.728" timestamp="1602682303531" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/0.-768.1366.728@0.0.1366.728" timestamp="1606223538179" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603466035944" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1600697220152">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1607523472621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728/-1366.3.1366.728@0.0.1366.728" timestamp="1607523472621" />
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600697220152" />
     <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1602779742825">
       <screen x="0" y="0" width="1366" height="728" />

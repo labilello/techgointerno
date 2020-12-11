@@ -1,73 +1,38 @@
+
+
+
+
 let deferredPrompt;
 const buttonInstall = document.querySelector("#buttonInstall");
+const dropdown = document.querySelector("#dropdown-menu");
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI to notify the user they can add to home screen
+    buttonInstall.hidden = false;
+    dropdown.attributes[dropdown.attributes.length - 1].value = "{'h-96 ': open, 'h-0': ! open}"
 
-    buttonInstall.addEventListener('click', () => {
-        const promptEvent = window.deferredPrompt;
-        if (!promptEvent) {
-            console.log('👍', 'NO PROMT');
-            alert("Esta opcion estará disponible pronto!")
-            // The deferred prompt isn't available.
-            return;
-        }
-        // Show the install prompt.
-        promptEvent.prompt();
-        // Log the result
-        promptEvent.userChoice.then((result) => {
-            console.log('👍', 'userChoice', result);
-            // Reset the deferred prompt variable, since
-            // prompt() can only be called once.
-            window.deferredPrompt = null;
-            // Hide the install button.
-            buttonInstall.classList.toggle('hidden', true);
+    buttonInstall.addEventListener('click', (e) => {
+        // hide our user interface that shows our A2HS button
+        // addBtn.style.display = 'none';
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+                deferredPrompt = null;
+            } else {
+                console.log('User dismissed the A2HS prompt');
+            }
+
         });
     });
-
-    // let displayMode = 'browser tab';
-    // if (navigator.standalone) {
-    //     displayMode = 'standalone-ios';
-    // }
-    // if (window.matchMedia('(display-mode: standalone)').matches) {
-    //     displayMode = 'standalone';
-    // }
-    // // Log launch display mode to analytics
-    // console.log('DISPLAY_MODE_LAUNCH:', displayMode);
 });
 
-
-// window.addEventListener('beforeinstallprompt', (e) => {
-//     // Prevent the mini-infobar from appearing on mobile
-//     e.preventDefault();
-//     // Stash the event so it can be triggered later.
-//     deferredPrompt = e;
-//     // Update UI notify the user they can install the PWA
-//     showInstallPromotion();
-// });
-//
-// buttonInstall.addEventListener('click', (e) => {
-//     // Hide the app provided install promotion
-//     hideMyInstallPromotion();
-//     // Show the install prompt
-//     deferredPrompt.prompt();
-//     // Wait for the user to respond to the prompt
-//     deferredPrompt.userChoice.then((choiceResult) => {
-//         if (choiceResult.outcome === 'accepted') {
-//             console.log('User accepted the install prompt');
-//         } else {
-//             console.log('User dismissed the install prompt');
-//         }
-//     });
-// });
-//
-// function showInstallPromotion() {
-//     buttonInstall.classList.toggle('hidden', false);
-// }
-//
-// function hideMyInstallPromotion() {
-//     buttonInstall.classList.toggle('hidden', true);
-//     console.log('Navegador NO compatible'
-// }
 
 function handler() {
     return {

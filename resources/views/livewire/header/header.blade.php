@@ -444,7 +444,7 @@
         </div>
     </div>
 
-    <nav class="w-full my-0 overflow-hidden transition-all duration-500 ease-out" :class="{'h-96 ': open, 'h-0': ! open}">
+    <nav id="dropdown-menu" class="w-full my-0 overflow-hidden transition-all duration-500 ease-out" :class="{'h-88 ': open, 'h-0': ! open}">
         <!-- Responsive Navigation Menu -->
         <ul class="pt-2 pb-3 space-y-1 text-white text-sm">
             <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary transition-all duration-150 ease-in-out">
@@ -504,7 +504,7 @@
         </ul>
 
         <div class="mx-4">
-            <a href="#" id="buttonInstall" class="py-2 block border-2 border-tertiary text-center text-tertiary hover:bg-tertiary-dark hover:text-white transition-all duration-150 ease-in-out"><i class="fas fa-download mr-2"></i>Instalar App</a>
+            <button hidden type="button" id="buttonInstall" class="py-2 w-full border-2 border-tertiary text-center text-tertiary hover:bg-tertiary-dark hover:text-white transition-all duration-150 ease-in-out"><i class="fas fa-download mr-2"></i>Instalar App</button>
         </div>
     </nav>
 

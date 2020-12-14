@@ -52,7 +52,7 @@
                     <div  @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
                         <div class="bg-white rounded shadow-lg border flex flex-col overflow-hidden">
                             <button @click={show=false} class="fill-current h-6 w-6 absolute right-0 top-0 m-6 font-3xl font-bold">&times;</button>
-                            <div class="px-6 py-3 text-xl border-b font-bold">Solicitar un nuevo usuario</div>
+                            <div class="px-6 py-3 text-xl border-b font-bold">Solicitar alta de usuario</div>
                             <div class="p-6 flex-grow text-xs sm:text-sm md:text-base">
                                 <p>Para solicitar un nuevo usuario debera completar el siguiente formulario <a class="uppercase underline text-red-600" href="https://forms.gle/6svaURcdtU2RwEU7A">(IR AL FORMULARIO)</a><br>Luego de completarlo, un administrador se contactará contigo informandote usuario y contraseña.</p>
                             </div>

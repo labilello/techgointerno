@@ -27,15 +27,15 @@ class MasiveImport extends Component
         }
 
         while ( ($data = fgetcsv($f, 1000, ";") ) !== false ) {
-            $store = Store::where('name', 'LIKE', "%$data[5]%")->first();
+            $store = Store::where('name', 'LIKE', "%$data[6]%")->first();
 
             $user = User::create([
                 'name'      => ucwords(strtolower("$data[2] $data[1]")),
                 'legajo'    => $data[0],
                 'phones'    => array(),
-                'sector'    => $data[3],
+                'sector'    => $data[5],
                 'role'      => $data[4],
-                'email'     => '',
+                'email'     => $data[3],
                 'password'  => Hash::make('123456789'),
                 'store_id'  => ($store != null) ? $store->id : 1,
             ]);

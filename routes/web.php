@@ -40,36 +40,40 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('soporte-tecnico')->grou
 });
 
 
-Route::namespace('Frontend')->group(function () {
-    Route::prefix('garantias')->group(function () {
-
-        Route::get('/samsung', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/nokia', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/hyundai', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/lg', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/motorola', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/apple', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/brother', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/asus', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/exo', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/nintendo', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/roku', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/turtlebeach', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/thrustmaster', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/commodore', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/datsun', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/blu', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/next', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/fitpower', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/audiologic', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/coventry', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/outlet', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/twg', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-        Route::get('/test', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
-    });
-});
+//Route::namespace('Frontend')->group(function () {
+//    Route::prefix('garantias')->group(function () {
+//
+//        Route::get('/samsung', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/nokia', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/hyundai', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/lg', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/motorola', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/apple', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/brother', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/asus', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/exo', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/nintendo', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/roku', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/turtlebeach', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/thrustmaster', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/commodore', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/datsun', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/blu', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/next', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/fitpower', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/audiologic', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/coventry', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/outlet', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/twg', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//        Route::get('/test', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index']);
+//    });
+//});
 
 Route::get('/offline', function () {
+    return view('vendor/laravelpwa/offline');
+});
+
+Route::get('/test', function () {
     return view('vendor/laravelpwa/offline');
 });
 //Route::redirect('/', './garantias');

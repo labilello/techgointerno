@@ -95,7 +95,8 @@
         </div>
 
         <div class="bg-gray-400 py-2 sm:py-3 flex justify-end px-4">
-            <button type="submit" class="px-3 py-1 sm:py-2 bg-gray-800 text-white rounded-md">Guardar</button>
+            <button type="submit" class="px-3 py-1 sm:py-2 bg-gray-800 text-white rounded-md" wire:loading.remove wire:target="photo">Guardar</button>
+            <div class="px-3 py-1 sm:py-2 bg-gray-800 text-white rounded-md" wire:loading wire:target="photo">Escanenado foto...</div>
         </div>
     </div>
 

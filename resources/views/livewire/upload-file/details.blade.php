@@ -12,7 +12,7 @@
 
         <ul wire:loading.remove class="">
             @foreach($files as $file)
-                <a href="{{ route('images.orderFiles.show', ['order' => $order, 'filename' => $file] )}}" target="_blank" class="flex justify-between mb-1 hover:text-tertiary-dark hover:font-bold">
+                <a href="{{ route('files.orderFiles.show', ['order' => $order, 'filename' => $file] )}}" target="_blank" class="flex justify-between mb-1 hover:text-tertiary-dark hover:font-bold">
                     <p>{{ $file }}</p>
                     <i class="fas fa-file-download text-lg"></i>
                 </a>

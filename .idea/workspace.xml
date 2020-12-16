@@ -154,24 +154,25 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/cloudfiles" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
-      <recent name="C:\entornoPHP\test1\storage\app\public" />
-      <recent name="C:\entornoPHP\test1\storage\app\resource" />
-      <recent name="C:\entornoPHP\test1\resources\views\warranties" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\header" />
       <recent name="C:\entornoPHP\test1\app\Http\Livewire\Profile" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\profile" />
       <recent name="C:\entornoPHP\test1\resources\views\warranties" />
-      <recent name="C:\entornoPHP\test1\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles\Carpeta 1" />
+      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
+      <recent name="C:\entornoPHP\test1\storage\app\public" />
+      <recent name="C:\entornoPHP\test1\storage\app\resource" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.show.blade.php">
@@ -235,6 +236,10 @@
       <workItem from="1607608513253" duration="2247000" />
       <workItem from="1607954252213" duration="1370000" />
       <workItem from="1607956653313" duration="2690000" />
+      <workItem from="1607959862729" duration="932000" />
+      <workItem from="1608044827167" duration="10213000" />
+      <workItem from="1608057477826" duration="13414000" />
+      <workItem from="1608123550436" duration="4120000" />
     </task>
     <servers />
   </component>
@@ -246,24 +251,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1600695125450" />
-    <state x="415" y="-603" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601992654181">
-      <screen x="0" y="-768" width="1366" height="728" />
+    <state x="415" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608046075504">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="415" y="-603" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/0.-768.1366.728@0.-768.1366.728" timestamp="1601992654181" />
+    <state x="415" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1608046075504" />
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606222493813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728/0.-768.1366.728@0.0.1366.728" timestamp="1606222493813" />
-    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602770334932">
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608061119971">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602770334932" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606223538179">
+    <state x="256" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1608061119971" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608045787233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="-650" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/0.-768.1366.728@0.-768.1366.728" timestamp="1602682303531" />
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/0.-768.1366.728@0.0.1366.728" timestamp="1606223538179" />
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603466035944" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608045787233" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1607523472621">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -335,15 +341,15 @@
     <state x="-974" y="3" width="657" height="728" key="find.popup/0.0.1366.728/-1366.3.1366.728@-1366.3.1366.728" timestamp="1607958935429" />
     <state x="392" y="0" width="657" height="728" key="find.popup/0.0.1366.728/0.-768.1366.728@0.0.1366.728" timestamp="1601044764907" />
     <state x="392" y="0" width="657" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1607095369763" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1606511010889">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1608058654273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606511010889" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606231114384">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608058654273" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1608054112892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="-719" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/0.-768.1366.728@0.-768.1366.728" timestamp="1602682732713" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/0.-768.1366.728@0.0.1366.728" timestamp="1606231114384" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602086393431" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1608054112892" />
   </component>
 </project>

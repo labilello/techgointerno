@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth:sanctum', 'verified'])->get('imagenes/solicitudes/{order}/{filename}',
-    [\App\Http\Controllers\ImagesController::class, 'orderFiles']
-)->name('images.orderFiles.show');
+    [\App\Http\Controllers\Backend\FilesController::class, 'orderFiles']
+)->name('files.orderFiles.show');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('cloud/interno/{directory}',
+    [\App\Http\Controllers\Backend\FilesController::class, 'cloudFiles']
+)->name('files.cloudFiles.show')->where('directory', '.*');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return view('dashboard');
@@ -36,9 +40,11 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('soporte-tecnico')->grou
     Route::get('/add', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addeditwarranty'])->name('warranty.add.get');
     Route::post('/add', [\App\Http\Controllers\Backend\WarrantyController::class, 'addwarranty'])->name('warranty.add.post');
     Route::get('/{warranty:name}', [\App\Http\Controllers\Frontend\WarrantyController::class, 'warrantydetail'])->name('warranty.details');
-
 });
 
+Route::middleware(['auth:sanctum', 'verified'])->prefix('cloud')->group(function () {
+    Route::get('/', function () { return view('cloud-files.cloud-files'); })->name('cloud.index');
+});
 
 //Route::namespace('Frontend')->group(function () {
 //    Route::prefix('garantias')->group(function () {
@@ -73,7 +79,4 @@ Route::get('/offline', function () {
     return view('vendor/laravelpwa/offline');
 });
 
-Route::get('/test', function () {
-    return view('vendor/laravelpwa/offline');
-});
 //Route::redirect('/', './garantias');

@@ -106,9 +106,9 @@
                             <div class="rounded-lg shadow-xs overflow-hidden">
                                 <div class="grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                     <a href="{{ route('photo.list') }}" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
-                                        <!-- Heroicon name: chart-bar -->
-                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                        <!-- Heroicon name: photograph -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                         </svg>
                                         <div class="space-y-1">
                                             <p class="text-base leading-6 font-medium text-gray-900">
@@ -116,6 +116,21 @@
                                             </p>
                                             <p class="text-sm leading-5 text-gray-500">
                                                 Suba nuevas imagenes o visualice el contenido ya almacenado en el servidor.
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                    <a href="{{ route('cloud.index') }}" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                                        <!-- Heroicon name: document-search -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"></path>
+                                        </svg>
+                                        <div class="space-y-1">
+                                            <p class="text-base leading-6 font-medium text-gray-900">
+                                                Documentos útiles
+                                            </p>
+                                            <p class="text-sm leading-5 text-gray-500">
+                                                Encuentre documentos que sean de utilidad para su labor diario.
                                             </p>
                                         </div>
                                     </a>
@@ -212,216 +227,7 @@
             {{ $pagename }}
         </div>
     </div>
-{{--    <nav aria-label="primary" class="relative z-20 flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">--}}
-
-{{--        <div class="relative group">--}}
-{{--            <button class="flex flex-row items-center w-full px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat">--}}
-{{--                <span>First Dropdown</span>--}}
-{{--            </button>--}}
-{{--            <div class="absolute z-10 hidden bg-grey-200 group-hover:block">--}}
-
-{{--                <div class="px-2 pt-2 pb-4 bg-white bg-gray-200 shadow-lg">--}}
-{{--                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">--}}
-{{--                        <p>--}}
-{{--                            dropdown content here--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-{{--        <div class="relative group">--}}
-{{--            <button class="flex flex-row items-center w-full px-4 py-4 mt-2 text-base font-bold text-left uppercase bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none font-montserrat">--}}
-{{--                <span>Second Dropdown</span>--}}
-{{--            </button>--}}
-{{--            <div class="absolute z-10 hidden bg-grey-200 group-hover:block">--}}
-
-{{--                <div class="px-2 pt-2 pb-4 bg-white bg-gray-200 shadow-lg">--}}
-{{--                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">--}}
-{{--                        <p>--}}
-{{--                            dropdown content here--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </nav>--}}
-
 </div>
-
-
-
-{{--    <div class="-mr-2 -my-2 md:hidden">--}}
-{{--        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">--}}
-{{--            <!-- Heroicon name: menu -->--}}
-{{--            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">--}}
-{{--                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />--}}
-{{--            </svg>--}}
-{{--        </button>--}}
-{{--    </div>--}}
-{{-- Hamburger icon --}}
-
-{{--<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">--}}
-{{--    <!-- Primary Navigation Menu -->--}}
-{{--    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">--}}
-{{--        <div class="flex justify-between h-16">--}}
-{{--            <div class="flex">--}}
-{{--                <!-- Logo -->--}}
-{{--                <div class="flex-shrink-0 flex items-center">--}}
-{{--                    <a href="/dashboard">--}}
-{{--                        <img class="h-10 block w-auto" src="{{ asset('resource/logo.svg') }}" alt="Logo" />--}}
-{{--                        <x-jet-application-mark class="block h-9 w-auto" />--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-
-{{--                <!-- Navigation Links -->--}}
-{{--                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">--}}
-{{--                    <a class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"--}}
-{{--                        href="#">--}}
-{{--                        {{ __('Servicio tecnico 2') }}--}}
-{{--                    </a>--}}
-
-
-{{--                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">--}}
-{{--                        {{ __('Dashboard') }}--}}
-{{--                    </x-jet-nav-link>--}}
-
-{{--                    <x-jet-nav-link href="{{ route('warranty.index') }}" :active="request()->routeIs('warranty.index')">--}}
-{{--                        {{ __('Garantías') }}--}}
-{{--                        {{ __('Servicio tecnico') }}--}}
-{{--                    </x-jet-nav-link>--}}
-
-{{--                    <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">--}}
-{{--                        {{ __('Usuarios') }}--}}
-{{--                        {{ __('Informacion general') }}--}}
-{{--                    </x-jet-nav-link>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <!-- Settings Dropdown -->--}}
-{{--            <div class="hidden sm:flex sm:items-center sm:ml-6">--}}
-{{--                <div class="hidden sm:flex items-center">--}}
-{{--                    <div class="text-right leading-none">--}}
-{{--                        <div class="block text-black uppercase text-sm"> {{ Auth::user()->name }} </div>--}}
-{{--                        <div class="inline-flex">--}}
-{{--                            <a href="/user/profile" class="text-blue-500 text-xs">Mi perfil</a>--}}
-{{--                            <div class="mx-1 text-xs">&diam;</div>--}}
-{{--                            <form method="POST" action="{{ route('logout') }}" class="text-blue-500 text-xs">--}}
-{{--                                @csrf--}}
-{{--                                <a href="{{ route('logout') }}"--}}
-{{--                                   onclick="event.preventDefault(); this.closest('form').submit();"--}}
-{{--                                >--}}
-{{--                                    Cerrar sesión--}}
-{{--                                </a>--}}
-{{--                            </form>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <button class="ml-2 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">--}}
-{{--                        <img class="h-10 w-10 rounded-full" src="{{ asset('storage/' . Auth::user()->profile_photo_path) }}" alt="Profile image" />--}}
-{{--                        <img class="h-10 w-10 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile image" />--}}
-{{--                    </button>--}}
-
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <!-- Hamburger -->--}}
-{{--            <div class="-mr-2 flex items-center sm:hidden">--}}
-{{--                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">--}}
-{{--                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">--}}
-{{--                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />--}}
-{{--                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />--}}
-{{--                    </svg>--}}
-{{--                </button>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
-{{--    <!-- Responsive Navigation Menu -->--}}
-{{--    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">--}}
-{{--        <div class="pt-2 pb-3 space-y-1">--}}
-{{--            <x-jet-responsive-nav-link href="/dashboard" :active="request()->routeIs('dashboard')">--}}
-{{--                {{ __('Dashboard') }}--}}
-{{--            </x-jet-responsive-nav-link>--}}
-{{--            <x-jet-responsive-nav-link href="/garantias" :active="request()->routeIs('warranty')">--}}
-{{--                {{ __('Garantías') }}--}}
-{{--            </x-jet-responsive-nav-link>--}}
-{{--            <x-jet-responsive-nav-link href="/usuarios" :active="request()->routeIs('users')">--}}
-{{--                {{ __('Usuarios') }}--}}
-{{--            </x-jet-responsive-nav-link>--}}
-{{--        </div>--}}
-
-{{--        <!-- Responsive Settings Options -->--}}
-{{--        <div class="pt-4 pb-1 border-t border-gray-200">--}}
-{{--            <div class="flex items-center px-4">--}}
-{{--                <div class="flex-shrink-0">--}}
-{{--                    <img class="h-10 w-10 rounded-full" src="{{ Auth::user()->profile_photo_url }}" alt="Profile image" />--}}
-{{--                    <img class="h-10 w-10 rounded-full" src="{{ asset('storage/' . Auth::user()->profile_photo_path) }}" alt="{{ Auth::user()->name }}" />--}}
-{{--                </div>--}}
-
-{{--                <div class="ml-3">--}}
-{{--                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>--}}
-{{--                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="mt-3 space-y-1">--}}
-{{--                <!-- Account Management -->--}}
-{{--                <x-jet-responsive-nav-link href="/user/profile" :active="request()->routeIs('profile.show')">--}}
-{{--                    {{ __('Profile') }}--}}
-{{--                </x-jet-responsive-nav-link>--}}
-
-{{--                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())--}}
-{{--                    <x-jet-responsive-nav-link href="/user/api-tokens" :active="request()->routeIs('api-tokens.index')">--}}
-{{--                        {{ __('API Tokens') }}--}}
-{{--                    </x-jet-responsive-nav-link>--}}
-{{--                @endif--}}
-
-{{--                <!-- Authentication -->--}}
-{{--                <form method="POST" action="{{ route('logout') }}">--}}
-{{--                    @csrf--}}
-
-{{--                    <x-jet-responsive-nav-link href="{{ route('logout') }}"--}}
-{{--                                    onclick="event.preventDefault();--}}
-{{--                                                this.closest('form').submit();">--}}
-{{--                        {{ __('Logout') }}--}}
-{{--                    </x-jet-responsive-nav-link>--}}
-{{--                </form>--}}
-
-{{--                <!-- Team Management -->--}}
-{{--                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())--}}
-{{--                    <div class="border-t border-gray-200"></div>--}}
-
-{{--                    <div class="block px-4 py-2 text-xs text-gray-400">--}}
-{{--                        {{ __('Manage Team') }}--}}
-{{--                    </div>--}}
-
-{{--                    <!-- Team Settings -->--}}
-{{--                    <x-jet-responsive-nav-link href="/teams/{{ Auth::user()->currentTeam->id }}" :active="request()->routeIs('teams.show')">--}}
-{{--                        {{ __('Team Settings') }}--}}
-{{--                    </x-jet-responsive-nav-link>--}}
-
-{{--                    <x-jet-responsive-nav-link href="/teams/create" :active="request()->routeIs('teams.create')">--}}
-{{--                        {{ __('Create New Team') }}--}}
-{{--                    </x-jet-responsive-nav-link>--}}
-
-{{--                    <div class="border-t border-gray-200"></div>--}}
-
-{{--                    <!-- Team Switcher -->--}}
-{{--                    <div class="block px-4 py-2 text-xs text-gray-400">--}}
-{{--                        {{ __('Switch Teams') }}--}}
-{{--                    </div>--}}
-
-{{--                    @foreach (Auth::user()->allTeams() as $team)--}}
-{{--                        <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />--}}
-{{--                    @endforeach--}}
-{{--                @endif--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</nav>--}}
-
-
 
 {{-- MD- HEADER --}}
 <div x-data="{ open: false }" :class="{'': open, '': ! open}" class="flex flex-col md:hidden relative bg-primary border-b border-white items-center justify-between">
@@ -450,6 +256,12 @@
             <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary transition-all duration-150 ease-in-out">
                 <a href="/" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
                     Inicio
+                </a>
+            </li>
+
+            <li class="text-white hover:text-tertiary hover:border-l-4 hover:border-tertiary focus:outline-none focus:text-gray-800 transition-all duration-150 ease-in-out">
+                <a href="{{ route('cloud.index') }}" class="block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+                    Documentos útiles
                 </a>
             </li>
 

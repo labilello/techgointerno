@@ -22,7 +22,7 @@ class Filter extends Component
     public function render()
     {
         return view('livewire.user.filter', [
-            'stores' => Store::all()
+            'stores' => Store::orderBy('name', 'ASC')->get()
         ]);
     }
 }

@@ -19,6 +19,7 @@
                     <li class="mb-2">- Gestión de imagenes de dispositivos enviados a Camacua</li>
                     <li class="mb-2">- Información sobre el soporte tecnico en garantía y fuera de garantía de diversas marcas</li>
                     <li class="mb-2">- Información de contacto sobre recursos registrados en la plataforma</li>
+                    <li class="mb-2"><span class="bg-blue-600 text-gray-200 text-xs px-2 py-1 rounded-full">Nuevo</span> - Listado de documentos utiles para la labor diaria </li>
                 </ul>
             </div>
         </div>

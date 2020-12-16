@@ -40,9 +40,9 @@
     @else
         @foreach($directories as $directory)
             <div class="w-full h-11 hover:bg-red-300 cursor-pointer transition duration-500 ease-out px-5 relative" wire:loading.remove>
-                <div class="w-10/12 sm:w-7/12 flex items-center my-1">
+                <div class="w-10/12 h-full sm:w-7/12 flex items-center my-1">
                     <i class="fas fa-folder mr-2 text-3xl text-yellow-300 w-8 text-center"></i>
-                    <div>
+                    <div class="truncate">
                         {{ $directory['filename'] }}
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($directory['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>
@@ -53,6 +53,7 @@
             </div>
         @endforeach
 
+{{--        @dd($files)--}}
         @foreach($files as $file)
             <div class="w-full h-11 flex items-center hover:bg-red-300 cursor-pointer transition duration-500 ease-out" wire:loading.remove>
                 <div class="w-10/12 sm:w-7/12 flex my-1 pl-5">
@@ -74,7 +75,7 @@
                         @endif
                             mr-2 text-3xl w-8 text-center">
                     </i>
-                    <div>
+                    <div class="truncate">
                         {{ $file['filename'] }}
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($file['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>

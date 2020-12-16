@@ -160,19 +160,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles\Carpeta 1" />
-      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
-      <recent name="C:\entornoPHP\test1\storage\app\public" />
-      <recent name="C:\entornoPHP\test1\storage\app\resource" />
-      <recent name="C:\entornoPHP\test1\resources\views\warranties" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\header" />
       <recent name="C:\entornoPHP\test1\app\Http\Livewire\Profile" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\profile" />
       <recent name="C:\entornoPHP\test1\resources\views\warranties" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles\Carpeta 1" />
+      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
+      <recent name="C:\entornoPHP\test1\storage\app\public" />
+      <recent name="C:\entornoPHP\test1\storage\app\resource" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.show.blade.php">
@@ -239,7 +239,7 @@
       <workItem from="1607959862729" duration="932000" />
       <workItem from="1608044827167" duration="10213000" />
       <workItem from="1608057477826" duration="13414000" />
-      <workItem from="1608123550436" duration="922000" />
+      <workItem from="1608123550436" duration="4120000" />
     </task>
     <servers />
   </component>

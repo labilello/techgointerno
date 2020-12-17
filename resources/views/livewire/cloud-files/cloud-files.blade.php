@@ -42,7 +42,7 @@
             <div class="w-full h-11 hover:bg-red-300 cursor-pointer transition duration-500 ease-out px-5 relative" wire:loading.remove>
                 <div class="w-10/12 h-full sm:w-7/12 flex items-center my-1">
                     <i class="fas fa-folder mr-2 text-3xl text-yellow-300 w-8 text-center"></i>
-                    <div class="truncate">
+                    <div class="truncate flex-1">
                         <span class="text-sm sm:text-base">{{ $directory['filename'] }}</span>
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($directory['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>
@@ -79,7 +79,7 @@
                         @endif
                             mr-2 text-3xl w-8 text-center">
                     </i>
-                    <div class="truncate">
+                    <div class="truncate flex-1">
                         <span class="text-sm sm:text-base">{{ $file['filename'] }}</span>
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($file['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>

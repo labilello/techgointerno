@@ -17,37 +17,9 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-storage/app/livewire-tmp/0nvOThL66yOSvRTmzJbMTCmnntDnFQ-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/17Sp55DnIpWY1mo9hDy4tuZoAfnCgO-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/3sR5uGji5xEWW4z1M5fBiUGCNgl2OB-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/5GBXkKh50WZZL2MZObZP1IagAgrjoC-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/5GWegbkFU5WqcY0PwTkmb4SfJH4R7K-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/6ukKianU1gKHQrTYunulNxCv2Xfrov-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/8YUKZ5rV3C0EmgTWMJSNIIXhw885M9-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/95SQqabqCrWzK1eHWS11nc4kFvG6cf-metadGVjbmljb3MyLmNzdg==-.txt
-storage/app/livewire-tmp/bymGmVWRs6k5DsyfMZWV3qTRbKHBWq-metaZGV0YWxsZS1yZWNlcGNpb24tTldJNzcwLmNzdg==-.txt
-storage/app/livewire-tmp/dCdxr45owfTyvr69HcFg0E0Q3tEGRI-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/eqbP7kKIBYSY8881XfW0VCQd972fqD-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/GtGwTSmSblvWgdDNZq2ROxn0g1NEK9-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/iRYnURoxTBIQhHNA95ADGPbDNTyQ9a-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/jW7ZNWXOzjMflTMCiphRZHjsbG6daB-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/jyb0dXjNsT6WhZDffjb6rifSPJ39OT-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/kglOeRIU9e9F0erwT5ifORXseWzivW-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/mhC6DFu71Py0yBCrKpr1T3tPrBm1Dg-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/MU07N94lDfw9L4rUFj5CEcQTKxbsTo-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/Nng9tgxR6B0U05xDx53QjtaijRjF0y-metadGVjbmljb3MyLmNzdg==-.txt
-storage/app/livewire-tmp/OhEloerH3HDRTpmMpnNLLIwF0R3WCe-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/peiUWY9AuUKWDjG9zrzrmH40dL9LD0-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/ruO1tZPjpPxVN0n8CqWdaCcs427zvf-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/Tn9BvjDVZ3v4X9nBtbEsqCb9PQCR0H-metadGVjbmljb3MyLmNzdg==-.txt
-storage/app/livewire-tmp/ToR6SrKOnFxvqauodbOS20bKGlHbOk-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/U1RKkHAK0tmUXxbSVGx5hmscXyJKkN-metaZGV0YWxsZS1yZWNlcGNpb24tTldJNzcwLmNzdg==-.txt
-storage/app/livewire-tmp/vx43CsOt0EK4AgdNC8hUF5tvZGqYuD-metadGVjbmljb3MuY3N2-.txt
-storage/app/livewire-tmp/WPKzqb6ZmIAzLput72xBg8Q4SvHXkC-metaZGV0YWxsZS1yZWNlcGNpb24tTldJNzcwLmNzdg==-.txt
-storage/app/livewire-tmp/zagu2djJnZcvmiHOAthgaXxAzVM6qE-metadGVjbmljb3MuY3N2-.txt
+storage/app/livewire-tmp/*
+public/storage/profile-photos/*
+storage/app/public/profile-photos/*
+storage/app/cloudfiles/*
+
 composer.lock
-storage/app/cloudfiles/Carpeta 1/file1.pdf
-storage/app/cloudfiles/Carpeta 1/file2.png
-storage/app/cloudfiles/Carpeta 1/Subcarpeta 1/file1
-storage/app/cloudfiles/file1.pdf
-storage/app/cloudfiles/file2.png

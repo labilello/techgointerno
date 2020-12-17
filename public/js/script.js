@@ -13,7 +13,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
     deferredPrompt = e;
     // Update UI to notify the user they can add to home screen
     buttonInstall.hidden = false;
-    dropdown.attributes[dropdown.attributes.length - 1].value = "{'h-96 ': open, 'h-0': ! open}"
+    dropdown.attributes[dropdown.attributes.length - 1].value = "{'h-header ': open, 'h-0': ! open}"
 
     buttonInstall.addEventListener('click', (e) => {
         // hide our user interface that shows our A2HS button

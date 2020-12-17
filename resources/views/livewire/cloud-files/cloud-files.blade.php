@@ -43,7 +43,7 @@
                 <div class="w-10/12 h-full sm:w-7/12 flex items-center my-1">
                     <i class="fas fa-folder mr-2 text-3xl text-yellow-300 w-8 text-center"></i>
                     <div class="truncate">
-                        {{ $directory['filename'] }}
+                        <span class="text-sm sm:text-base">{{ $directory['filename'] }}</span>
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($directory['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>
                 </div>
@@ -60,23 +60,27 @@
                     <i class="fas
                         @if ( $file['extension'] == 'pdf' )
                             fa-file-pdf text-red-400
+                        @elseif ( $file['extension'] == 'txt' )
+                            fa-file-alt text-indigo-400
+                        @elseif ( $file['extension'] == 'msg' )
+                            fa-envelope text-purple-400
                         @elseif( $file['extension'] == 'docx' || $file['extension'] == 'docm' || $file['extension'] == 'dotx' || $file['extension'] == 'dotm' || $file['extension'] == 'doc' || $file['extension'] == 'dot' )
                             fa-file-word text-blue-400
                         @elseif( $file['extension'] == 'pptx' || $file['extension'] == 'pptm'|| $file['extension'] == 'potx' || $file['extension'] == 'potm' || $file['extension'] == 'ppam' || $file['extension'] == 'ppsx' || $file['extension'] == 'ppsm' || $file['extension'] == 'sldx' )
                             fa-file-powerpoint text-blue-400
-                        @elseif( $file['extension'] == 'xlsx' || $file['extension'] == 'xlsm' || $file['extension'] == 'xltx' || $file['extension'] == 'xltm' || $file['extension'] == 'xlsb' || $file['extension'] == 'xlam' )
+                        @elseif( $file['extension'] == 'xls' || $file['extension'] == 'xlsx' || $file['extension'] == 'xlsm' || $file['extension'] == 'xltx' || $file['extension'] == 'xltm' || $file['extension'] == 'xlsb' || $file['extension'] == 'xlam' )
                             fa-file-excel text-green-400
                         @elseif( $file['extension'] == 'avi' || $file['extension'] == 'mp4' || $file['extension'] == 'mkv' || $file['extension'] == 'asf' || $file['extension'] == 'qt' || $file['extension'] == 'qtl' || $file['extension'] == 'mov' || $file['extension'] == 'mpeg' || $file['extension'] == 'webm' )
                             fa-file-video text-blue-400
                         @elseif( $file['extension'] == 'bmp' || $file['extension'] == 'gif' || $file['extension'] == 'jpeg' || $file['extension'] == 'png' || $file['extension'] == 'svg' || $file['extension'] == 'nef' )
                             fa-file-image text-blue-400
                         @else
-                            fa-file-archive text-gray-400
+                            fa-fa-question text-gray-400
                         @endif
                             mr-2 text-3xl w-8 text-center">
                     </i>
                     <div class="truncate">
-                        {{ $file['filename'] }}
+                        <span class="text-sm sm:text-base">{{ $file['filename'] }}</span>
                         <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($file['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
                     </div>
                 </div>

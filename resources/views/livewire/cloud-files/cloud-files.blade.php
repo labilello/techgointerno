@@ -1,4 +1,4 @@
-<div class="rounded bg-white py-3">
+﻿<div class="rounded bg-white py-3">
     <div class="flex px-5 items-center mb-3">
         @if($currentDirectoryString != 'Carpeta principal')
             <i class="fas fa-arrow-left mr-5 hover:bg-black hover:text-white rounded-full p-2 transition duration-100 ease-out sm:text-xl"
@@ -75,7 +75,7 @@
                         @elseif( $file['extension'] == 'bmp' || $file['extension'] == 'gif' || $file['extension'] == 'jpeg' || $file['extension'] == 'png' || $file['extension'] == 'svg' || $file['extension'] == 'nef' )
                             fa-file-image text-blue-400
                         @else
-                            fa-fa-question text-gray-400
+                            fa-question text-gray-400
                         @endif
                             mr-2 text-3xl w-8 text-center">
                     </i>

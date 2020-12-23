@@ -18,12 +18,6 @@
 
 
         @livewireStyles
-
-
-        <!-- Scripts -->
-        <!-- Grab Google CDNs jQuery; fall back to local if necessary -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
-        <script>window.Alpine || document.write('<script src="js/app.js"><\/script>')</script>
     </head>
     <body class="font-opensans antialiased">
         <div class="min-h-screen bg-gray-200">
@@ -38,6 +32,10 @@
         @stack('modals')
 
         @livewireScripts
+        <!-- Scripts -->
+        <!-- Grab Google CDNs jQuery; fall back to local if necessary -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.js" defer></script>
+        <script>window.Alpine || document.write('<script src="js/app.js"><\/script>')</script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

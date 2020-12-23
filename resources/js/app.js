@@ -1,5 +1,5 @@
-require('./bootstrap');
 import 'alpinejs'
+require('./bootstrap');
 import { createPopper } from '@popperjs/core';
 
 const button = document.querySelector('#button');
@@ -10,7 +10,6 @@ const tooltip = document.querySelector('#tooltip');
 createPopper(button, tooltip, {
     placement: 'right',
 });
-
 
 function handler() {
     return {

@@ -15,10 +15,6 @@ class Show extends Component
     protected $listeners = ['searchUsers' => 'search'];
 
 
-    public function mount(){
-        $name = $role = $legajo = $sector = $store = '';
-    }
-
     public function search($keys) {
 
         $this->name = $keys['name'];
@@ -40,10 +36,6 @@ class Show extends Component
             ->orderBy('name', 'ASC')
             ->paginate(15);
 
-//        if($this->name != '')
-//            dd($users);
-
-//        $users->setPath('');
 
         return view('livewire.user.show', [
             'users' => $users

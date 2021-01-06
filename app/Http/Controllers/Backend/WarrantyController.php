@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\OtherWarranty;
 use App\Models\Warranty;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,18 @@ class WarrantyController extends Controller
         if($request->input('internalContact') !== null)
             foreach ($request->input('internalContact') as $contactID)
                 $warranty->internalContacts()->attach( $contactID );
+    }
+
+    public function addotherwarranty(Request $request) {
+//        dd($request->input());
+
+        $otherWarranty = new OtherWarranty([
+            'name' => $request->input('name'),
+            'phones' => $request->input('phones'),
+            'emails' => $request->input('emails'),
+            'pages' => $request->input('pages')
+        ]);
+
+        $otherWarranty->save();
     }
 }

@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return view('dashboard');
+})->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('imagenes/solicitudes/{order}/{filename}',
     [\App\Http\Controllers\Backend\FilesController::class, 'orderFiles']
@@ -20,10 +23,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('imagenes/solicitudes/{orde
 Route::middleware(['auth:sanctum', 'verified'])->get('cloud/interno/{directory}',
     [\App\Http\Controllers\Backend\FilesController::class, 'cloudFiles']
 )->name('files.cloudFiles.show')->where('directory', '.*');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return view('dashboard');
-})->name('index');
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('usuarios')->group(function () {
     Route::get('/', function () { return view('users.show'); })->name('users.list');
@@ -39,6 +38,8 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('soporte-tecnico')->grou
     Route::get('/', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index'])->name('warranty.index');
     Route::get('/add', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addeditwarranty'])->name('warranty.add.get');
     Route::post('/add', [\App\Http\Controllers\Backend\WarrantyController::class, 'addwarranty'])->name('warranty.add.post');
+    Route::get('/addOther', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.get');
+    Route::post('/addOther', [\App\Http\Controllers\Backend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.post');
     Route::get('/{warranty:name}', [\App\Http\Controllers\Frontend\WarrantyController::class, 'warrantydetail'])->name('warranty.details');
 });
 

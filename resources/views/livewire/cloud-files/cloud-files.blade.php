@@ -56,7 +56,7 @@
 {{--        @dd($files)--}}
         @foreach($files as $file)
             <div class="w-full h-11 flex items-center hover:bg-red-300 cursor-pointer transition duration-500 ease-out" wire:loading.remove>
-                <div class="w-10/12 sm:w-7/12 flex my-1 pl-5">
+                <div class="w-10/12 sm:w-7/12 flex items-center my-1 pl-5">
                     <i class="fas
                         @if ( $file['extension'] == 'pdf' )
                             fa-file-pdf text-red-400
@@ -81,10 +81,10 @@
                     </i>
                     <div class="truncate flex-1">
                         <span class="text-sm sm:text-base">{{ $file['filename'] }}</span>
-                        <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::createFromTimestamp($file['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }}</span>
+                        <span class="block sm:hidden text-xs text-indigo-700">Ult. Modificación: {{ \Carbon\Carbon::parse($file['lastmodif'])->diffForHumans() }}</span>
                     </div>
                 </div>
-                <div class="hidden sm:block sm:w-3/12">{{ \Carbon\Carbon::createFromTimestamp($file['lastmodif'], 'America/Argentina/Buenos_Aires')->isoformat('d MMMM YYYY') }} </div>
+                <div class="hidden sm:block sm:w-3/12">{{ \Carbon\Carbon::parse($file['lastmodif'])->diffForHumans() }} </div>
                 <div class="text-center w-2/12">
                     <a href="{{ route('files.cloudFiles.show', ['directory' => $file['directory'] ] ) }}" class="hidden sm:inline bg-red-600 text-white px-3 py-2 rounded" download target="_blank">Descargar</a>
                     <a href="{{ route('files.cloudFiles.show', ['directory' => $file['directory'] ] ) }}" class="inline sm:hidden text-blue-600 text-lg px-3 py-2 rounded" download target="_blank"> <i class="fas fa-cloud-download-alt"></i> </a>

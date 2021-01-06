@@ -109,6 +109,7 @@
             </div>
         </div>
 
+
         <div class=" md:col-span-8">
             <div class="flex items-center">
                 <svg class="w-4 h-4 fill-current text-gray-500 ml-4 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
@@ -148,11 +149,11 @@
     </div>
 
     <div class="w-full my-4">
-        @if(count($results) < 1)
+        @if(count($warranties) < 1 && count($otherwarranties) < 1)
             <p>No se han encontrado marcas en la busqueda.</p>
         @endif
 
-        @foreach($results as $group=>$result)
+        @foreach($warranties as $group=>$result)
             <div x-data={show:false} class="mb-2">
                 <div class="rounded-t-md border text-sm md:text-base border-b-0 px-4 py-2 md:px-10 md:py-4 flex justify-between transition duration-150 ease-in hover:text-white @if($group == 'Otros centros de soporte') text-white bg-red-400 @else text-primary-light bg-primary-light @endif">
                     <button @click="show=!show" class="text-left w-full focus:outline-none" type="button">
@@ -164,18 +165,59 @@
                 </div>
                 <div x-show="show" class="border px-4 py-2 md:px-10 md:py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     @foreach($result as $brand)
-                        <a href="{{ route('warranty.details', ['warranty' => $brand->name]) }}" class="h-24 sm:h-32 w-full text-center uppercase font-bold bg-green-400 px-8 py-3 flex justify-center items-center
+                        <a href="{{ route('warranty.details', ['warranty' => $brand]) }}" class="h-24 sm:h-32 w-full text-center uppercase font-bold bg-green-400 px-8 py-3 flex justify-center items-center
                                                     hover:bg-green-300">
-                            @if( Storage::disk('local')->exists('public/marcas/' . $brand->name . '.svg')  )
-                                <img src="{{ asset('storage/marcas/'. $brand->name . '.svg') }}" alt="" class="h-full">
-                            @elseif( Storage::disk('local')->exists('public/marcas/' . $brand->name . '.png') )
-                                <img src="{{ asset('storage/marcas/'. $brand->name . '.png') }}" alt="" class="h-full">
+                            @if( Storage::disk('local')->exists('public/marcas/' . $brand . '.svg')  )
+                                <img src="{{ asset('storage/marcas/'. $brand . '.svg') }}" alt="" class="h-full">
+                            @elseif( Storage::disk('local')->exists('public/marcas/' . $brand . '.png') )
+                                <img src="{{ asset('storage/marcas/'. $brand . '.png') }}" alt="" class="h-full">
                             @else
-                                {{ $brand->name }}
+                                {{ $brand }}
                             @endif
                         </a>
+                    @endforeach
+                </div>
+            </div>
+        @endforeach
 
-
+        @foreach($otherwarranties as $group=>$result)
+            <div x-data={show:false} class="mb-2">
+                <div class="rounded-t-md border text-sm md:text-base border-b-0 px-4 py-2 md:px-10 md:py-4 flex justify-between transition duration-150 ease-in hover:text-white @if($group == 'Otros centros de soporte') text-white bg-red-400 @else text-primary-light bg-primary-light @endif">
+                    <button @click="show=!show" class="text-left w-full focus:outline-none" type="button">
+                        {{ $group }}
+                    </button>
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div x-show="show" class="border px-4 py-2 md:px-10 md:py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6">
+                    @foreach($result as $brand)
+                        <div class="border-t-8 border-pink-600 rounded-lg mb-4 bg-white transition-all duration-150 transform cursor-default hover:scale-105">
+                            <h3 class="mt-2 text-center font-bold text-pink-700 text-lg md:text-xl">{{ $brand->name }}</h3>
+                            <div class="text-left py-3 px-5 text-xs md:text-sm text-gray-400">
+                                @foreach($brand->phones as $phone)
+                                    <div class="flex mb-1">
+                                        <p class="w-5/12 inline-flex">{{ $phone['description'] }}:</p>
+                                        <a class="w-7/12 ml-2 hover:underline hover:text-tertiary-dark truncate" href="tel:{{ $phone['value'] }}">{{ $phone['value'] }}</a>
+                                    </div>
+                                @endforeach
+                                @foreach($brand->emails as $email)
+                                    <div class="flex mb-1">
+                                        <p class="w-5/12 inline-flex">{{ $email['description'] }}:</p>
+                                        <a class="w-7/12 ml-2 hover:underline hover:text-tertiary-dark truncate" href="mailto:{{ $email['value'] }}">{{ $email['value'] }}</a>
+                                    </div>
+                                @endforeach
+                                @foreach($brand->pages as $page)
+                                    <div class="flex mb-1">
+                                        <p class="w-5/12 inline-flex">{{ $page['description'] }}:</p>
+                                        <a class="w-7/12 ml-2 hover:underline hover:text-tertiary-dark truncate" href="{{ $page['value'] }}">{{ $page['value'] }}</a>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="text-center bg-gray-400 py-2 px-2">
+                                <p class="text-xs antialiased italic">Ultima actualización: {{ \Carbon\Carbon::parse($brand->updated_at)->diffForHumans() }}</p>
+                            </div>
+                        </div>
                     @endforeach
                 </div>
             </div>

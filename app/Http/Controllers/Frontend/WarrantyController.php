@@ -37,4 +37,8 @@ class WarrantyController extends Controller
         ]);
     }
 
+    public function addotherwarranty() {
+        return view('newOtherWarranty');
+    }
+
 }

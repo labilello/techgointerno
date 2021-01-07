@@ -192,9 +192,9 @@
                 </div>
                 <div x-show="show" class="border px-4 py-2 md:px-10 md:py-6 grid grid-cols-1 md:grid-cols-2 gap-x-6">
                     @foreach($result as $brand)
-                        <div class="border-t-8 border-pink-600 rounded-lg mb-4 bg-white transition-all duration-150 transform cursor-default hover:scale-105">
+                        <div class="border-t-8 border-pink-600 rounded-lg mb-4 bg-white transition-all duration-150 transform cursor-default hover:scale-105 flex flex-col">
                             <h3 class="mt-2 text-center font-bold text-pink-700 text-lg md:text-xl">{{ $brand->name }}</h3>
-                            <div class="text-left py-3 px-5 text-xs md:text-sm text-gray-400">
+                            <div class="text-left py-3 px-5 text-xs md:text-sm text-gray-400 flex-1">
                                 @foreach($brand->phones as $phone)
                                     <div class="flex mb-1">
                                         <p class="w-5/12 inline-flex">{{ $phone['description'] }}:</p>

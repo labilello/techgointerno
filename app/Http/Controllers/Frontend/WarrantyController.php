@@ -38,7 +38,7 @@ class WarrantyController extends Controller
     }
 
     public function addotherwarranty() {
-        return view('newOtherWarranty');
+        return view('warranties.newOtherWarranty');
     }
 
 }

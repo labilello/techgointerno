@@ -154,25 +154,25 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
-      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles\Carpeta 1" />
-      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
-      <recent name="C:\entornoPHP\test1\storage\app\public" />
-      <recent name="C:\entornoPHP\test1\storage\app\resource" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\entornoPHP\test1\techgointerno\resources\js" />
       <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\header" />
       <recent name="C:\entornoPHP\test1\app\Http\Livewire\Profile" />
       <recent name="C:\entornoPHP\test1\resources\views\livewire\profile" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\entornoPHP\test1\techgointerno\resources\views\warranties" />
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles" />
+      <recent name="C:\entornoPHP\test1\techgointerno\storage\app\cloudfiles\Carpeta 1" />
+      <recent name="C:\entornoPHP\test1\techgointerno\app\Http\Controllers\Backend" />
+      <recent name="C:\entornoPHP\test1\storage\app\public" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.show.blade.php">
@@ -247,6 +247,8 @@
       <workItem from="1609778033945" duration="62000" />
       <workItem from="1609858503468" duration="11082000" />
       <workItem from="1609936798899" duration="8977000" />
+      <workItem from="1610030799141" duration="1331000" />
+      <workItem from="1610037219963" duration="1414000" />
     </task>
     <servers />
   </component>

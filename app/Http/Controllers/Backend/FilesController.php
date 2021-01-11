@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 
 class FilesController extends Controller
@@ -16,7 +14,7 @@ class FilesController extends Controller
         $storagePath = self::ORDERFILESDIRECTORY . '/' . $order . '/' . $filename;
 
         try {
-            return response()->download( storage_path('app/' . $storagePath ) );
+            return response()->file( storage_path('app/' . $storagePath ) );
         } catch (FileNotFoundException $exception) {
             return response()->view('errors.404', [], 404);
         }
@@ -24,7 +22,7 @@ class FilesController extends Controller
 
     public function cloudFiles($directory) {
         try {
-            return response()->download( storage_path('app/' . $directory ) );
+            return response()->file( storage_path('app/' . $directory ) );
         } catch (FileNotFoundException $exception) {
             return response()->view('errors.404', [], 404);
         }

@@ -41,20 +41,25 @@ class CloudFiles extends Component
     private function getFormated($directory) {
 
         $elements = explode("/", $directory);
-        $elements = explode('.', $elements[ sizeof($elements) - 1 ] );
+        $file = $elements[ sizeof($elements) - 1 ];
+        $asd = strripos($file, '.');
 
-        $filename = $elements[0];
-
-        if( sizeof($elements) > 1 )
-            $extension = $elements[1];
+        if($asd !== false) {
+            $filename = substr( $file, 0, $asd);
+            $extension = substr( $file, $asd + 1 );
+        } else {
+            $filename = $file;
+        }
 
         $lastmodif = Storage::disk('local')->lastModified($directory);
+
         return array(
             'filename' => $filename,
             'extension' => isset($extension) ? $extension : '',
             'lastmodif' => $lastmodif,
             'directory' => $directory
         );
+
     }
 
     public function render()

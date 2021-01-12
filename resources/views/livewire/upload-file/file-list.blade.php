@@ -21,7 +21,7 @@
         <span class="ml-2 text-base font-bold text-tertiary-dark">Buscando archivos...</span>
     </div>
 
-    <div wire:loading.remove class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 mb-2 md:mb-0 text-xs">
+    <div wire:loading.remove class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 mb-2 md:mb-0">
 
         @foreach($photos as $photo)
             <livewire:upload-file.details :photo="$photo" :key="time().$photo->id"/>

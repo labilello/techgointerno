@@ -12,8 +12,13 @@
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                     Sucursal:
                 </label>
-{{--                <input wire:model="store" type="text" class="rounded py-2 px-3 w-full border border-solid border-gray-600" @if(! \Illuminate\Support\Facades\Auth::user()->is_admin()) readonly @endif>--}}
-                <input wire:model="store" type="text" class="rounded py-2 px-3 w-full border border-solid border-gray-600">
+                @if(! \Illuminate\Support\Facades\Auth::user()->is_admin())
+                    <input wire:model="store" type="text" class="rounded py-2 px-3 w-full border border-solid border-gray-600 antialiased text-gray-500 bg-gray-100 cursor-not-allowed" readonly>
+                @else
+                    <input wire:model="store" type="text" class="rounded py-2 px-3 w-full border border-solid border-gray-600 ">
+                @endif
+
+
             </div>
         </div>
     </div>

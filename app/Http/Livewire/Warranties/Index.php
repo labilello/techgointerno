@@ -5,22 +5,12 @@ namespace App\Http\Livewire\Warranties;
 use App\Models\OtherWarranty;
 use App\Models\Warranty;
 use App\Models\WarrantyGroup;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class Index extends Component
 {
     public $search_query = '';
-//    public $warranties = [];
-//    public $otherWarranties = [];
-//    public $is_search = false;
-
-    public function mount() {
-//        $this->results = $this->formatSearch();
-    }
-
-    public function updatedSearchQuery() {
-//        $this->results = $this->formatSearch($this->search_query);
-    }
 
     public function render()
     {
@@ -51,18 +41,4 @@ class Index extends Component
         ]);
     }
 
-    // where('name', 'LIKE', "%{$this->search_query}%")
-    //                ->orderBy('warranty_group_id')
-    //                ->orderBy('name', 'asc')
-    //                ->get()
-
-    private function formatSearch($query = '') {
-//        $warranties =
-//
-//        foreach ($warranties as $warranty){
-//            $results[$warranty->warrantyGroup->name][] = $warranty;
-//        }
-//
-//        return $results;
-    }
 }

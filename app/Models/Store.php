@@ -19,8 +19,12 @@ class Store extends Model
         'phones' => 'array'
     ];
 
-    public function store() {
+    public function users() {
         return $this->hasMany('App\Models\User');
+    }
+
+    public function photos() {
+        return $this->hasMany('App\Models\Photo');
     }
 
 }

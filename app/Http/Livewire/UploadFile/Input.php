@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\UploadFile;
 
+use App\Models\Photo;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -20,17 +22,20 @@ class Input extends Component
             'inputTempFiles.*' => 'image|max:10000', // 1MB Max
         ]);
 
+
         foreach ($this->inputTempFiles as $file)
             $this->tempFiles[] = $file;
     }
 
     public function storePhotos(){
         $witherror = 0;
+        $path = "orderfiles/{$this->order}";
+
         $filescount = count( Storage::disk('local')->allFiles( "public/orderfiles/{$this->order}" ) );
 
         foreach ($this->tempFiles as $index=>$file) {
             try {
-                $file->storeAs("orderfiles/{$this->order}", $this->order . '_' . ( $index + $filescount ) . '.' . $file->getClientOriginalExtension(), 'local');
+                $file->storeAs($path, $this->order . '_' . ( $index + $filescount ) . '.' . $file->getClientOriginalExtension(), 'local');
                 $file->delete();
             } catch (FileException $e) { $witherror++; }
         }
@@ -42,6 +47,13 @@ class Input extends Component
         else
             session()->flash('message', 'Imagenes almacenadas correctamente!');
 
+        $photos = new Photo([
+            'order' => $this->order,
+            'path' => $path,
+            'store_id' => Auth::user()->store->id
+        ]);
+
+        $photos->save();
         $this->reset();
     }
 

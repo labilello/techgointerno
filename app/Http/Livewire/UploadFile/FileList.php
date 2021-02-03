@@ -15,7 +15,7 @@ class FileList extends Component
     public function mount() {
         $this->order = '';
 
-        if( Auth::user()->hasRole('Administrador') || stripos(Auth::user()->store->name, 'camacua') )
+        if( Auth::user()->hasRole('Administrador') || stripos(Auth::user()->store->name, 'camacua') !== false )
             $this->store = '';
         else
             $this->store = Auth::user()->store->name;

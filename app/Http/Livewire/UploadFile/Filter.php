@@ -18,7 +18,7 @@ class Filter extends Component
     }
 
     public function mount () {
-        if( ! Auth::user()->hasRole('Administrador') || ! stripos(Auth::user()->store->name, 'camacua') )
+        if( ! Auth::user()->hasRole('Administrador') || stripos(Auth::user()->store->name, 'camacua') === false )
             $this->store = Auth::user()->store->name;
         else
             $this->store = '';

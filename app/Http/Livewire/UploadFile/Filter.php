@@ -18,7 +18,7 @@ class Filter extends Component
     }
 
     public function mount () {
-        if( ! Auth::user()->is_admin() )
+        if( ! Auth::user()->hasRole('Administrador') )
             $this->store = Auth::user()->store->name;
         else
             $this->store = '';

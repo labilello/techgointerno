@@ -34,6 +34,12 @@ window.addEventListener('beforeinstallprompt', (e) => {
 });
 
 
+function addChildFromTemplate(event) {
+
+    var template = event.target.parentElement.parentElement.parentElement.lastElementChild.content.firstElementChild.cloneNode(true);
+    event.target.parentElement.parentElement.parentElement.querySelector('.des-child').appendChild( template );
+}
+
 function handler() {
     return {
         fields: [],

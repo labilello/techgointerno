@@ -67,13 +67,8 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Warranty', 'user_warranty', 'user_id', 'warranty_id');
     }
 
-    public function is_admin () {
-        return $this->attributes['role'] == 'Administrador';
+    public function hasRole($role) {
+        return $this->attributes['role'] == $role;
     }
 
-//    public function getProfilePhotoUrlAttribute()
-//    {
-//        dd($this->profile_photo_path);
-//        return Storage::url($this->profile_photo_path);
-//    }
 }

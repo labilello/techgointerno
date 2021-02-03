@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('cloud/interno/{directory}'
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('usuarios')->group(function () {
     Route::get('/', function () { return view('users.show'); })->name('users.list');
-    Route::get('/importmasivo', function () { return view('users.masiveimport'); })->name('users.massiveimport');
+    Route::middleware(['role:Administrador'])->get('/importmasivo', function () { return view('users.masiveimport'); })->name('users.massiveimport');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('fotos')->group(function () {
@@ -36,10 +36,11 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('fotos')->group(function
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('soporte-tecnico')->group(function () {
     Route::get('/', [\App\Http\Controllers\Frontend\WarrantyController::class, 'index'])->name('warranty.index');
-    Route::get('/add', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addeditwarranty'])->name('warranty.add.get');
-    Route::post('/add', [\App\Http\Controllers\Backend\WarrantyController::class, 'addwarranty'])->name('warranty.add.post');
-    Route::get('/addOther', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.get');
-    Route::post('/addOther', [\App\Http\Controllers\Backend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.post');
+    Route::middleware(['role:Administrador'])->get('/add', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addeditwarranty'])->name('warranty.add.get.back');
+    Route::middleware(['role:Administrador'])->get('/add2', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addeditwarranty'])->name('warranty.add.get');
+    Route::middleware(['role:Administrador'])->post('/add', [\App\Http\Controllers\Backend\WarrantyController::class, 'addwarranty'])->name('warranty.add.post');
+    Route::middleware(['role:Administrador'])->get('/addOther', [\App\Http\Controllers\Frontend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.get');
+    Route::middleware(['role:Administrador'])->post('/addOther', [\App\Http\Controllers\Backend\WarrantyController::class, 'addotherwarranty'])->name('warranty.addother.post');
     Route::get('/{warranty:name}', [\App\Http\Controllers\Frontend\WarrantyController::class, 'warrantydetail'])->name('warranty.details');
 });
 

@@ -5,8 +5,6 @@ namespace App\Http\Livewire\UploadFile;
 use App\Models\Photo;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
 class FileList extends Component
@@ -17,7 +15,7 @@ class FileList extends Component
     public function mount() {
         $this->order = '';
 
-        if( Auth::user()->is_admin() )
+        if( Auth::user()->hasRole('Administrador') || stripos(Auth::user()->store->name, 'camacua') )
             $this->store = '';
         else
             $this->store = Auth::user()->store->name;

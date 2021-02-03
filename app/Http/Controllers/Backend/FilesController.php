@@ -16,7 +16,7 @@ class FilesController extends Controller
         try {
             return response()->file( storage_path('app/' . $storagePath ) );
         } catch (FileNotFoundException $exception) {
-            return response()->view('errors.404', [], 404);
+            abort(404, 'No hemos podido acceder al archivo solicitado. Intente nuevamente mas tarde o contactese con un administrador.');
         }
     }
 
@@ -24,7 +24,7 @@ class FilesController extends Controller
         try {
             return response()->file( storage_path('app/' . $directory ) );
         } catch (FileNotFoundException $exception) {
-            return response()->view('errors.404', [], 404);
+            abort(404, 'No hemos podido acceder al archivo solicitado. Intente nuevamente mas tarde o contactese con un administrador.');
         }
     }
 }

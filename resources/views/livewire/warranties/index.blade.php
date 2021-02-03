@@ -1,9 +1,16 @@
 <div>
     <div class="flex flex-col md:grid md:grid-cols-12 md:gap-x-14">
+        @if(\Illuminate\Support\Facades\Auth::user()->hasRole('Administrador'))
+            <div class="md:col-start-6 md:col-span-7 flex flex-col md:flex-row justify-end mb-2">
+                <a href="{{ route('warranty.add.get') }}" class="text-center mb-1 md:mb-0 md:mr-2 py-2 px-4 bg-blue-400 text-white transition-all duration-500 ease-in-out hover:border-gray-500 hover:bg-primary-light cursor-pointer">Agregar soporte techgo</a>
+                <a href="{{ route('warranty.addother.get') }}" class="text-center py-2 px-4 bg-blue-400 text-white transition-all duration-500 ease-in-out hover:border-gray-500 hover:bg-primary-light cursor-pointer">Agregar otro centro de soporte</a>
+            </div>
+        @endif
+
         {{-- Primera linea --}}
-        <div x-data="{ show: false }" class=" md:col-span-4">
+        <div x-data="{ show: false }" class="md:col-span-4">
             <div class="">
-                <button @click={show=true} type="button" class="w-full mb-2 px-4 bg-green-400 text-white py-2 md:py-3 transition-all duration-500 ease-in-out hover:border-gray-500 hover:bg-red-500 cursor-pointer">Periodos de Garantía</Button>
+                <button @click={show=true} type="button" class="w-full mb-2 px-4 bg-green-400 text-white py-2 md:py-3 transition-all duration-500 ease-in-out hover:border-gray-500 hover:bg-red-500 cursor-pointer">Periodos de Garantía</button>
             </div>
             <div x-show="show" tabindex="0" class="z-40 overflow-auto left-0 top-0 bottom-0 right-0 w-full h-full fixed">
                 <div  @click.away="show = false" class="z-50 relative p-3 mx-auto my-0 max-w-full" style="width: 600px;">
@@ -110,7 +117,7 @@
         </div>
 
 
-        <div class=" md:col-span-8">
+        <div class="md:col-span-8">
             <div class="flex items-center">
                 <svg class="w-4 h-4 fill-current text-gray-500 ml-4 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 <input wire:model="search_query" type="text" placeholder="Ejemplo: Samsung" class="w-full -ml-8 pl-10 px-4 py-2 md:py-3 border rounded-lg text-gray-700 focus:outline-none focus:border-green-500"/>
